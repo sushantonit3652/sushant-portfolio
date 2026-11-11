@@ -2,8 +2,6 @@
  * =========================================================================
  * SUSHANT THAKUR — DIGITAL PRODUCT ENGINEER
  * Centralized Portfolio Configuration & Real-World Data Source
- * 
- * Verified against official CV & Production App Store / Google Play listings
  * =========================================================================
  */
 
@@ -18,7 +16,7 @@ const PORTFOLIO_CONFIG = {
     experienceYears: "2.6+",
     location: "Himachal Pradesh, Chamba, Dalhousie, India",
     phone: "+91 7807268475",
-    summary: "React Native Developer with 2+ years of experience in creating high-performing Android & iOS applications using React Native and Expo. Expertise in scalable mobile applications, REST APIs integration, Firebase, Push Notifications, Background Location Tracking, and third-party library integrations.",
+    summary: "React Native Developer with 2+ years of experience creating high-performing Android & iOS applications using React Native and Expo. Expertise in scalable mobile applications, REST APIs integration, Firebase, Push Notifications, Background Location Tracking, and third-party library integrations.",
     aboutHeadline: "Not Just Code. I Build Products.",
     aboutParagraphs: [
       "I am a React Native Developer specializing in creating high-performing Android & iOS applications. With over 2+ years of verified software development experience, I bring deep expertise in scalable mobile architecture, REST API integrations, and intuitive UI/UX design.",
@@ -26,7 +24,7 @@ const PORTFOLIO_CONFIG = {
       "I hold a Bachelor of Science (Non-Medical) from DAV College Dharamshala, and have a proven record of optimizing React Native modules, reducing app cold-start latencies, and delivering reliable 60fps mobile user experiences."
     ],
     stats: [
-      { value: "2.6+", label: "Years Experience", description: "Mobile App Development" },
+      { value: "2+", label: "Years Experience", description: "React Native Engineering" },
       { value: "05+", label: "Production Apps", description: "Live on App Store & Play Store" },
       { value: "60", suffix: "fps", label: "Fluid Performance", description: "Native Smoothness & Micro-interactions" },
       { value: "100", suffix: "%", label: "Cross-Platform", description: "Unified Android & iOS Codebases" }
@@ -54,9 +52,9 @@ const PORTFOLIO_CONFIG = {
     ],
     backend: [
       { name: "Firebase & Firestore", level: "Production", icon: "bi-fire", tag: "Realtime NoSQL & Auth" },
-      { name: "REST APIs", level: "Expertise", icon: "bi-arrow-left-right", tag: "API Integration" },
-      { name: "Push Notifications", level: "Production", icon: "bi-bell", tag: "FCM & APNs" },
       { name: "Background Geolocation", level: "Expertise", icon: "bi-geo-alt", tag: "GPS & Telemetry" },
+      { name: "REST APIs", level: "Daily", icon: "bi-arrow-left-right", tag: "API Integration" },
+      { name: "Push Notifications", level: "Production", icon: "bi-bell", tag: "FCM & APNs" },
       { name: "Redux Toolkit & Context", level: "Advanced", icon: "bi-diagram-3", tag: "State Management" }
     ],
     tools: [
@@ -70,8 +68,33 @@ const PORTFOLIO_CONFIG = {
 
   projects: [
     {
-      id: "airopass",
+      id: "subsource",
       number: "01",
+      name: "Subsource — Virtual Manager",
+      category: "Enterprise Workforce & GPS Telemetry",
+      filterCategory: "mobile enterprise",
+      liveUrl: "https://apps.apple.com/us/app/subsource-virtual-manager/id6499141041",
+      storeLabel: "Apple App Store",
+      image: "assets/img/projects/subsource-clockin.png",
+      secondaryImages: [
+        "assets/img/projects/subsource-stopshift.png",
+        "assets/img/projects/subsource-expense.png"
+      ],
+      icon: "assets/img/projects/subsource-icon.png",
+      shortDescription: "An enterprise workforce management application on the Apple App Store featuring GPS tracking, attendance management, shift scheduling, store visit management, offline sync, and live location tracking.",
+      longOverview: "Subsource Virtual Manager is an enterprise-grade mobile solution currently live on the Apple App Store. It empowers distributed field teams and managers with one-tap shift clock-ins, battery-efficient background geolocation auditing, satellite tracking, geofenced store visits, and automated timesheet sync.",
+      techStack: ["React Native", "Redux Toolkit", "Firestore", "REST APIs", "Background Geolocation", "Google Maps", "Push Notifications", "AsyncStorage"],
+      contributions: [
+        "Engineered the Start Shift / Clock-in architecture with instant biometric confirmation and satellite telemetry verification.",
+        "Implemented high-accuracy background geolocation with battery-saving algorithms for continuous route auditing.",
+        "Built store visit in/out logging with precise geofencing perimeters and tamper-resistant offline sync.",
+        "Developed comprehensive expense history tracking with interactive calendar and status workflows."
+      ],
+      caseStudyAvailable: true
+    },
+    {
+      id: "airopass",
+      number: "02",
       name: "Airopass — Travel, Visa & Flights",
       category: "Travel Technology & Tour Packages",
       filterCategory: "mobile travel",
@@ -91,27 +114,6 @@ const PORTFOLIO_CONFIG = {
         "Built responsive flight booking module supporting One Way, Round Trip, and Multi-City cabin selections.",
         "Implemented verified hotel discovery engine with real-time room availability, date pickers, and destination lookups.",
         "Engineered the Partner Mode and dynamic in-app wallet allowing travel agents to process direct bookings."
-      ],
-      caseStudyAvailable: true
-    },
-    {
-      id: "subsource",
-      number: "02",
-      name: "Subsource — Virtual Manager",
-      category: "Enterprise Workforce & GPS Telemetry",
-      filterCategory: "mobile enterprise",
-      liveUrl: "https://apps.apple.com/us/app/subsource-virtual-manager/id6499141041",
-      storeLabel: "Apple App Store",
-      image: "assets/img/projects/subsource-screen1.jpeg",
-      icon: "assets/img/projects/subsource-icon.png",
-      shortDescription: "An enterprise workforce management application on the Apple App Store featuring GPS tracking, attendance management, shift scheduling, store visit management, offline sync, and live location tracking.",
-      longOverview: "Subsource Virtual Manager is an enterprise-grade mobile solution currently live on the Apple App Store. It empowers distributed field teams and managers with battery-efficient background geolocation auditing, geofenced clock-in, and automated timesheet sync.",
-      techStack: ["React Native", "Redux Toolkit", "Firestore", "REST APIs", "Background Geolocation", "Google Maps", "Push Notifications", "AsyncStorage"],
-      contributions: [
-        "Developed enterprise mobile architecture utilizing Redux Toolkit, AsyncStorage, and REST APIs.",
-        "Implemented high-accuracy background geolocation with battery-saving algorithms for continuous route auditing.",
-        "Built store visit management and geofenced attendance punch-ins verifying worker presence on site.",
-        "Engineered offline sync allowing field employees to log shifts and visits even in zero-reception areas."
       ],
       caseStudyAvailable: true
     },
@@ -252,7 +254,6 @@ const PORTFOLIO_CONFIG = {
   ]
 };
 
-// Make available in window scope
 if (typeof window !== "undefined") {
   window.PORTFOLIO_CONFIG = PORTFOLIO_CONFIG;
 }
