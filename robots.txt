@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sushantonit3652.github.io/sushant-portfolio/sitemap.xml

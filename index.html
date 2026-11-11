@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sushant Thakur — Digital Product Engineer | React Native Developer</title>
+  
+  <meta name="description"
+    content="Sushant Thakur is a React Native Developer & Digital Product Engineer building high-performance Android and iOS mobile applications with 2.6+ years of real-world development experience.">
+  <meta name="keywords"
+    content="Sushant Thakur, React Native Developer, Mobile App Developer, Android Developer, iOS Developer, Expo, TypeScript, JavaScript, Firebase, Mobile Product Engineer">
+  <meta name="author" content="Sushant Thakur">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sushant Thakur — Digital Product Engineer | React Native Developer">
+  <meta property="og:description"
+    content="Building Modern Mobile Experiences with React Native for Android & iOS. View selected real-world applications and engineering case studies.">
+  <meta property="og:url" content="https://github.com/sushantonit3652/sushant-portfolio">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23080B0A'/><text x='50%' y='62%' font-size='50' font-family='sans-serif' font-weight='800' fill='%23C6FF4D' text-anchor='middle'>ST</text></svg>">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Custom Core Design System -->
+  <link href="assets/css/portfolio.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Custom Cursor (Desktop Only) -->
+  <div class="custom-cursor-dot d-none d-lg-block"></div>
+  <div class="custom-cursor-ring d-none d-lg-block"></div>
+
+  <!-- Ambient Ambient Radial Background Lights -->
+  <div class="ambient-glow-top"></div>
+  <div class="ambient-glow-mid"></div>
+
+  <!-- Site Navigation Bar -->
+  <nav class="site-navbar" id="navbar">
+    <div class="container d-flex align-items-center justify-content-between">
+      
+      <!-- Brand & Status Pill -->
+      <a href="#hero" class="brand-wrapper">
+        <span class="brand-monogram">SUSHANT THAKUR <span>/ ST.</span></span>
+        <span class="brand-status-pill d-none d-sm-inline-flex">
+          <span class="pulse-dot"></span> AVAILABLE FOR PROJECTS
+        </span>
+      </a>
+
+      <!-- Center Desktop Nav Links -->
+      <ul class="nav-links-desktop">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Tech Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#experience">Experience</a></li>
+      </ul>
+
+      <!-- Right Nav Actions -->
+      <div class="nav-actions">
+        <!-- Theme Switcher -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode">
+          <i class="bi bi-sun"></i>
+        </button>
+
+        <!-- Resume Modal Trigger -->
+        <button class="btn-ghost d-none d-md-inline-flex" data-bs-toggle="modal" data-bs-target="#resumeModal">
+          <i class="bi bi-file-earmark-person"></i> Resume
+        </button>
+
+        <!-- Primary CTA -->
+        <a href="#contact" class="btn-prime d-none d-sm-inline-flex">
+          Let's Talk <i class="bi bi-arrow-up-right"></i>
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Open Mobile Menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="drawer-overlay"></div>
+
+  <!-- Mobile Offcanvas Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div>
+      <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom border-dark">
+        <span class="brand-monogram">ST. <span>STUDIO</span></span>
+        <button class="drawer-close-btn btn-ghost p-2" aria-label="Close menu">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <div class="mb-4">
+        <span class="brand-status-pill">
+          <span class="pulse-dot"></span> AVAILABLE FOR PROJECTS
+        </span>
+      </div>
+
+      <ul class="drawer-nav list-unstyled d-flex flex-direction-column gap-3 fs-5 fw-semibold">
+        <li><a href="#hero" class="d-block py-2 text-white">01. Home</a></li>
+        <li><a href="#about" class="d-block py-2 text-white">02. About</a></li>
+        <li><a href="#skills" class="d-block py-2 text-white">03. Technology Stack</a></li>
+        <li><a href="#projects" class="d-block py-2 text-white">04. Selected Projects</a></li>
+        <li><a href="#services" class="d-block py-2 text-white">05. Services</a></li>
+        <li><a href="#process" class="d-block py-2 text-white">06. Development Process</a></li>
+        <li><a href="#experience" class="d-block py-2 text-white">07. Experience</a></li>
+        <li><a href="#contact" class="d-block py-2 text-white">08. Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <button class="btn-ghost w-100 mb-3 justify-content-center" data-bs-toggle="modal" data-bs-target="#resumeModal">
+        <i class="bi bi-file-earmark-person"></i> View & Download Resume
+      </button>
+      <a href="#contact" class="btn-prime w-100 justify-content-center">
+        Let's Connect <i class="bi bi-arrow-up-right"></i>
+      </a>
+      <div class="d-flex justify-content-center gap-3 mt-4 text-muted">
+        <a href="https://github.com/sushantonit3652" target="_blank" rel="noopener noreferrer"><i class="bi bi-github fs-5"></i></a>
+        <a href="https://www.linkedin.com/in/sushant-thakur-053261259/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin fs-5"></i></a>
+        <a href="mailto:sushantthakur.dev@gmail.com"><i class="bi bi-envelope fs-5"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       HERO SECTION
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        
+        <!-- Left Column: Editorial Headline & Messaging -->
+        <div class="col-lg-7" data-aos="fade-up">
+          
+          <div class="hero-editorial-badge">
+            <span class="pulse-dot"></span>
+            <span class="font-mono text-lime" style="font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em;">AVAILABLE FOR PROJECTS</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Building Digital Experiences That <span class="highlight-word">Move Businesses</span> Forward.
+          </h1>
+
+          <p class="hero-subtitle">
+            I'm Sushant Thakur, a React Native Developer building modern Android and iOS applications with a focus on performance, usability and real-world business solutions.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn-prime">
+              EXPLORE MY WORK <i class="bi bi-arrow-down-right"></i>
+            </a>
+            <a href="#contact" class="btn-ghost">
+              LET'S CONNECT <i class="bi bi-chat-text"></i>
+            </a>
+            <button class="btn-ghost" data-bs-toggle="modal" data-bs-target="#resumeModal">
+              <i class="bi bi-download"></i> RESUME
+            </button>
+          </div>
+
+          <div class="hero-tech-pills">
+            <span class="text-muted-custom font-mono me-2" style="font-size: 0.8rem;">CORE STACK:</span>
+            <span class="tech-tag-pill"><i class="bi bi-phone text-lime"></i> React Native</span>
+            <span class="tech-tag-pill"><i class="bi bi-apple text-lime"></i> iOS</span>
+            <span class="tech-tag-pill"><i class="bi bi-android2 text-lime"></i> Android</span>
+            <span class="tech-tag-pill"><i class="bi bi-box text-lime"></i> Expo</span>
+            <span class="tech-tag-pill"><i class="bi bi-filetype-ts text-lime"></i> TypeScript</span>
+            <span class="tech-tag-pill"><i class="bi bi-fire text-lime"></i> Firebase</span>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Interactive Realistic Mobile Frame & Technical Badges -->
+        <div class="col-lg-5" data-aos="fade-left" data-aos-delay="150">
+          <div class="hero-device-stage">
+            
+            <!-- Smartphone Mockup -->
+            <div class="phone-mockup-frame">
+              <div class="phone-notch"></div>
+              
+              <!-- Phone Screen Content -->
+              <div class="phone-screen-body">
+                
+                <div class="phone-app-header">
+                  <div class="app-logo">
+                    <span class="text-lime fw-bold font-mono">ST</span>
+                    <span style="font-size: 0.85rem;">Mobile Studio</span>
+                  </div>
+                  <span class="font-mono text-lime" style="font-size: 0.72rem;">60 FPS</span>
+                </div>
+
+                <!-- Featured App Card Preview (Airopass) -->
+                <div class="phone-card-feature">
+                  <span class="badge-mini">LIVE TRAVEL APP</span>
+                  <h5>Airopass Travel Suite</h5>
+                  <p>Visa services, dynamic travel wallet & live tour booking for Android and iOS.</p>
+                  <div class="d-flex justify-content-between align-items-center pt-2 border-top border-dark">
+                    <span class="font-mono text-muted-custom" style="font-size: 0.7rem;">React Native + Expo</span>
+                    <span class="text-lime font-mono" style="font-size: 0.72rem;">Active</span>
+                  </div>
+                </div>
+
+                <!-- Workforce GPS Card Preview -->
+                <div class="phone-card-feature" style="background: linear-gradient(135deg, #131E18 0%, #0E1612 100%);">
+                  <span class="badge-mini" style="background: rgba(33, 199, 122, 0.15); color: #21C77A;">GPS & WORKFORCE</span>
+                  <h5>SubSourceTracking</h5>
+                  <p>Geofenced clock-in, live route auditing & background telemetry sync.</p>
+                  <div class="d-flex justify-content-between align-items-center pt-2 border-top border-dark">
+                    <span class="font-mono text-muted-custom" style="font-size: 0.7rem;">Low-Power Geolocation</span>
+                    <span class="text-emerald font-mono" style="font-size: 0.72rem;">Synced</span>
+                  </div>
+                </div>
+
+                <!-- Bottom Tab Bar -->
+                <div class="mt-auto pt-2 border-top border-dark d-flex justify-content-around text-muted-custom font-mono" style="font-size: 0.85rem;">
+                  <span class="text-lime"><i class="bi bi-grid-fill"></i></span>
+                  <span><i class="bi bi-geo-alt"></i></span>
+                  <span><i class="bi bi-bell"></i></span>
+                  <span><i class="bi bi-person"></i></span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Floating Code Snippet Card -->
+            <div class="floating-code-card d-none d-sm-block">
+              <div class="code-header-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="text-muted-custom">// Architecture Component</div>
+              <div><span class="text-lime">const</span> App = () =&gt; {</div>
+              <div class="ps-2"><span class="text-muted-custom">&lt;</span><span class="text-white">MobileRuntime</span></div>
+              <div class="ps-4"><span class="text-lime">platform</span>="universal"</div>
+              <div class="ps-4"><span class="text-lime">fps</span>={60}</div>
+              <div class="ps-2"><span class="text-muted-custom">/&gt;</span></div>
+              <div>};</div>
+            </div>
+
+            <!-- Floating Performance Metric Badge -->
+            <div class="floating-metric-badge d-none d-sm-flex">
+              <div class="metric-circle">2.6+</div>
+              <div>
+                <div class="fw-bold text-white" style="font-size: 0.88rem;">Years Verified</div>
+                <div class="text-muted-custom font-mono" style="font-size: 0.72rem;">React Native Exp.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT ME SECTION
+       ========================================================================= -->
+  <section class="about-section" id="about">
+    <div class="container">
+      
+      <div class="row g-5">
+        
+        <!-- Left Side: Editorial Manifesto & Personal Brand -->
+        <div class="col-lg-6" data-aos="fade-up">
+          <span class="section-label">01 — PHILOSOPHY & BACKGROUND</span>
+          <h2 class="section-title">Not Just Code. I Build Products.</h2>
+          
+          <div class="editorial-quote">
+            "Engineering mobile applications isn't just about rendering UI screens — it is about orchestrating intuitive, resilient digital tools that solve actual business challenges."
+          </div>
+
+          <p class="mb-3">
+            I am a React Native Developer with approximately <strong>2.6 years of hands-on software engineering experience</strong>, focused primarily on cross-platform Android and iOS product development.
+          </p>
+
+          <p class="mb-4">
+            My experience spans the full lifecycle of modern mobile apps: from structuring scalable component trees in React Native and Expo to integrating secure Firebase authentication, architecting Cloud Firestore data models, integrating RESTful microservices, and debugging memory leaks on physical test devices.
+          </p>
+
+          <!-- 4 Verified Metrics Grid -->
+          <div class="stats-grid-container">
+            <div class="stat-box">
+              <div class="stat-number">2.6+</div>
+              <div class="stat-label">Years Experience</div>
+              <div class="stat-sub">Mobile Software Engineering</div>
+            </div>
+
+            <div class="stat-box">
+              <div class="stat-number">04+</div>
+              <div class="stat-label">Production Apps</div>
+              <div class="stat-sub">Real-World Architectures</div>
+            </div>
+
+            <div class="stat-box">
+              <div class="stat-number">60<span style="font-size: 1.4rem;">fps</span></div>
+              <div class="stat-label">Native Smoothness</div>
+              <div class="stat-sub">Profiled Micro-interactions</div>
+            </div>
+
+            <div class="stat-box">
+              <div class="stat-number">100<span style="font-size: 1.4rem;">%</span></div>
+              <div class="stat-label">Cross-Platform</div>
+              <div class="stat-sub">Unified Android & iOS</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Side: Architectural Pillars & Engineering Approach -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+          
+          <div class="arch-card">
+            <div class="arch-icon-wrapper">
+              <i class="bi bi-cpu"></i>
+            </div>
+            <h4>Cross-Platform Native Architecture</h4>
+            <p class="mb-0">
+              Writing unified, clean React Native code that delivers platform-authentic gestures, haptics, and navigation patterns on both iOS and Android without duplicated code overhead.
+            </p>
+          </div>
+
+          <div class="arch-card">
+            <div class="arch-icon-wrapper">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h4>Robust Backend & API Integrations</h4>
+            <p class="mb-0">
+              Seamlessly wiring complex REST APIs, tokenized authentication states, Cloud Firestore real-time listeners, and Cloudinary media pipelines with resilient offline fallback handling.
+            </p>
+          </div>
+
+          <div class="arch-card">
+            <div class="arch-icon-wrapper">
+              <i class="bi bi-tools"></i>
+            </div>
+            <h4>Debugging & Production Deployment</h4>
+            <p class="mb-0">
+              Proficient in React Native debugging tools, Android Studio Logcat, Xcode build diagnostics, and automating releases using Expo Application Services (EAS Build).
+            </p>
+          </div>
+
+          <!-- Quick Personal Info Box (Editable from portfolio-data.js) -->
+          <div class="p-3 rounded mt-3" style="background: var(--bg-surface); border: 1px dashed var(--border-subtle);">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <span class="font-mono text-lime small">PRIMARY LOCATION</span>
+              <span class="text-white small fw-semibold">India (Open to Remote Globally)</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="font-mono text-lime small">PRIMARY CONTACT</span>
+              <span class="text-white small fw-semibold">sushantthakur.dev@gmail.com</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       TECHNICAL EXPERTISE SECTION
+       ========================================================================= -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">02 — TECHNICAL EXPERTISE</span>
+        <h2 class="section-title">My Technology Stack</h2>
+        <p class="section-desc mx-auto">
+          A disciplined toolkit focused on modern mobile engineering, reliable backend integrations, and automated build ecosystems.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- Group 1: Mobile Development -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="skills-category-card">
+            <div class="category-header">
+              <div class="category-icon"><i class="bi bi-phone"></i></div>
+              <div>
+                <h4 class="mb-0 fs-5">Mobile Development</h4>
+                <span class="font-mono text-muted-custom small">CORE FOUNDATION</span>
+              </div>
+            </div>
+
+            <div class="skill-items-list">
+              <div class="skill-row-item">
+                <div class="skill-title-group">
+                  <i class="bi bi-chevron-right"></i>
+                  <div>
+                    <div class="fw-semibold text-white">React Native</div>
+                    <div class="text-muted-custom small">Cross-Platform Apps</div>
+                  </div>
+                </div>
+                <span class="skill-badge">Core</span>
+              </div>
+
+              <div class="skill-row-item">
+                <div class="skill-title-group">
+                  <i class="bi bi-chevron-right"></i>
+                  <div>
+                    <div class="fw-semibold text-white">React.js</div>
+                    <div class="text-muted-custom small">Component Architecture</div>
+                  </div>
+                </div>
+                <span class="skill-badge">Advanced</span>
+              </div>
+
+              <div class="skill-row-item">
+                <div class="skill-title-group">
+                  <i class="bi bi-chevron-right"></i>
+                  <div>
+                    <div class="fw-semibold text-white">Expo & EAS</div>
+                    <div class="text-muted-custom small">Managed & Bare Workflow</div>
+                  </div>
+                </div>
+                <span class="skill-badge">Expertise</span>
+              </div>
+
+              <div class="skill-row-item">
+                <div class="skill-title-group">
+                  <i class="bi bi-chevron-right"></i>
+                  <div>
+                    <div class="fw-semibold text-white">JavaScript (ES6+)</div>
+                    <div class="text-muted-custom small">Async, Modules, Closures</div>
+                  </div>
+                </div>
+                <span class="skill-badge">Daily</span>
+              </div>
+
+              <div class="skill-row-item">
+                <div class="skill-title-group">
+                  <i class="bi bi-chevron-right"></i>
+                  <div>
+                    <div class="fw-semibold text-white">TypeScript</div>
+                    <div class="text-muted-custom small">Type-Safe Mobile Code</div>
+                  </div>
+                </div>
+                <span class="skill-badge">Production</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Group 2: Backend & Integration -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="skills-category-card">
+            <div class="category-header">
+              <div class="category-icon"><i class="bi bi-cloud-check"></i></div>
+              <div>
+                <h4 class="mb-0 fs-5">Backend & Integration</h4>
+                <span class="font-mono text-muted-custom small">DATA & SERVICES</span>
+              </div>
+            </div>
+
+            <div class="skill-items-list">
+              <div class="skill-row-item">
+                <div class="skill-title-group">
+                  <i class="bi bi-chevron-right"></i>
+                  <div>
+                    <div class="fw-semibold text-white">Firebase Auth</div>
+                    <div class="text-muted-custom small">OAuth, Email & Biometrics</div>
+                  </div>
+                </div>
+                <span class="skill-badge">Production</span>
+              </div>
+
+              <div class="skill-row-item">
+                <div class="skill-title-group">
+                  <i class="bi bi-chevron-right"></i>
+                  <div>
+                    <div class="fw-semibold text-white">Cloud Firestore</div>
+                    <div class="text-muted-custom small">Realtime NoSQL & Sync</div>
+                  </div>
+                </div>
+                <span class="skill-badge">Production</span>
+              </div>
+
+              <div class="skill-row-item">
+                <div class="skill-title-group">
+                  <i class="bi bi-chevron-right"></i>
+                  <div>
+                    <div class="fw-semibold text-white">RESTful APIs</div>
+                    <div class="text-muted-custom small">JSON Endpoints & Axios</div>
+                  </div>
+                </div>
+                <span class="skill-badge">Expertise</span>
+              </div>
+
+              <div class="skill-row-item">
+                <div class="skill-title-group">
+                  <i class="bi bi-chevron-right"></i>
+                  <div>
+                    <div class="fw-semibold text-white">Cloudinary</div>
+                    <div class="text-muted-custom small">Image CDN & Optimization</div>
+                  </div>
+                </div>
+                <span class="skill-badge">Production</span>
+              </div>
+
+              <div class="skill-row-item">
+                <div class="skill-title-group">
+                  <i class="bi bi-chevron-right"></i>
+                  <div>
+                    <div class="fw-semibold text-white">Node.js Fundamentals</div>
+                    <div class="text-muted-custom small">Backend Runtime Basics</div>
+                  </div>
+                </div>
+                <span class="skill-badge">Working</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Group 3: Development Tools -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="skills-category-card">
+            <div class="category-header">
+              <div class="category-icon"><i class="bi bi-terminal"></i></div>
+              <div>
+                <h4 class="mb-0 fs-5">Development Tools</h4>
+                <span class="font-mono text-muted-custom small">WORKFLOW & BUILD</span>
+              </div>
+            </div>
+
+            <div class="skill-items-list">
+              <div class="skill-row-item">
+                <div class="skill-title-group">
+                  <i class="bi bi-chevron-right"></i>
+                  <div>
+                    <div class="fw-semibold text-white">Git & GitHub</div>
+                    <div class="text-muted-custom small">Version Control & PRs</div>
+                  </div>
+                </div>
+                <span class="skill-badge">Daily</span>
+              </div>
+
+              <div class="skill-row-item">
+                <div class="skill-title-group">
+                  <i class="bi bi-chevron-right"></i>
+                  <div>
+                    <div class="fw-semibold text-white">VS Code</div>
+                    <div class="text-muted-custom small">Primary Dev Environment</div>
+                  </div>
+                </div>
+                <span class="skill-badge">Primary</span>
+              </div>
+
+              <div class="skill-row-item">
+                <div class="skill-title-group">
+                  <i class="bi bi-chevron-right"></i>
+                  <div>
+                    <div class="fw-semibold text-white">Android Studio</div>
+                    <div class="text-muted-custom small">Logcat, Emulators, Gradle</div>
+                  </div>
+                </div>
+                <span class="skill-badge">Tooling</span>
+              </div>
+
+              <div class="skill-row-item">
+                <div class="skill-title-group">
+                  <i class="bi bi-chevron-right"></i>
+                  <div>
+                    <div class="fw-semibold text-white">Xcode</div>
+                    <div class="text-muted-custom small">iOS Simulators & Config</div>
+                  </div>
+                </div>
+                <span class="skill-badge">Tooling</span>
+              </div>
+
+              <div class="skill-row-item">
+                <div class="skill-title-group">
+                  <i class="bi bi-chevron-right"></i>
+                  <div>
+                    <div class="fw-semibold text-white">EAS Build</div>
+                    <div class="text-muted-custom small">Cloud Builds & Bundles</div>
+                  </div>
+                </div>
+                <span class="skill-badge">Production</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FEATURED PROJECTS SECTION
+       ========================================================================= -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5" data-aos="fade-up">
+        <div>
+          <span class="section-label">03 — SELECTED WORK</span>
+          <h2 class="section-title mb-2">Real-World Applications</h2>
+          <p class="section-desc mb-0">
+            Selected mobile applications architected and delivered with React Native. Showing verified features and contributions.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="project-filters mt-4 mt-md-0">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="travel">Travel Tech</button>
+          <button class="filter-btn" data-filter="enterprise">Enterprise & GPS</button>
+          <button class="filter-btn" data-filter="social">Social Media</button>
+        </div>
+      </div>
+
+      <!-- PROJECT 01: AIROPASS -->
+      <div class="project-card-editorial" data-category="mobile travel" data-aos="fade-up">
+        <div class="row g-0">
+          
+          <div class="col-lg-7 project-content-pane">
+            <div class="project-index-number">PROJECT 01 / 04</div>
+            <div class="project-category-tag">TRAVEL TECHNOLOGY & BOOKING ECOSYSTEM</div>
+            <h3 class="project-name">Airopass — Travel & Visa Application</h3>
+            <p class="project-desc">
+              A travel-focused mobile application engineered with visa desk services, international travel insurance, tour package booking, in-app wallet ledger, and specialized Partner Mode for affiliate travel agents.
+            </p>
+
+            <div class="contribution-box">
+              <h6>MY VERIFIED CONTRIBUTIONS</h6>
+              <ul class="contribution-list">
+                <li>Architected multi-step visa application flow with document image capture, compression, and client-side validation.</li>
+                <li>Built an in-app digital wallet module supporting balance ledger, transaction histories, and streamlined booking checkout.</li>
+                <li>Implemented dedicated Partner Mode toggle with customized booking workflows for travel partners.</li>
+                <li>Integrated tour packages catalog with live filtering and multi-currency formatting.</li>
+              </ul>
+            </div>
+
+            <div class="project-tech-stack">
+              <span class="project-tech-pill">React Native</span>
+              <span class="project-tech-pill">Expo</span>
+              <span class="project-tech-pill">REST APIs</span>
+              <span class="project-tech-pill">Firebase</span>
+              <span class="project-tech-pill">Redux Toolkit</span>
+              <span class="project-tech-pill">Native Maps</span>
+            </div>
+
+            <div>
+              <button class="btn-prime view-case-study-btn" data-project-id="airopass">
+                View Case Study <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Realistic Mobile UI Mockup -->
+          <div class="col-lg-5 project-visual-pane">
+            <div class="mockup-card-phone">
+              <div class="phone-notch" style="width: 80px; height: 18px; margin: 8px auto 4px;"></div>
+              
+              <div class="screen-header-bar">
+                <span>9:41</span>
+                <span class="text-lime font-mono">Airopass Pass</span>
+                <span><i class="bi bi-wifi"></i> <i class="bi bi-battery-full"></i></span>
+              </div>
+
+              <div class="screen-body-app">
+                <!-- Digital Boarding / Visa Card -->
+                <div class="p-3 rounded mb-3" style="background: linear-gradient(135deg, #1C2B24 0%, #101A15 100%); border: 1px solid var(--border-accent);">
+                  <div class="d-flex justify-content-between text-muted-custom small mb-1">
+                    <span>E-VISA VERIFIED</span>
+                    <span class="text-lime font-mono">STATUS: ACTIVE</span>
+                  </div>
+                  <div class="fs-5 fw-bold text-white mb-2">DUBAI, UAE (30 DAYS)</div>
+                  <div class="d-flex justify-content-between pt-2 border-top border-dark small">
+                    <div><span class="text-muted d-block" style="font-size: 0.68rem;">HOLDER</span>Sushant T.</div>
+                    <div><span class="text-muted d-block" style="font-size: 0.68rem;">CLASS</span>Tourist Single</div>
+                  </div>
+                </div>
+
+                <!-- Wallet Card -->
+                <div class="p-3 rounded mb-3" style="background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="text-muted-custom small">Travel Wallet</span>
+                    <span class="badge-mini">Partner Mode</span>
+                  </div>
+                  <div class="fs-4 fw-bold text-lime mb-1">$2,450.00</div>
+                  <div class="text-muted-custom" style="font-size: 0.72rem;">Ready for instant visa & flight payments</div>
+                </div>
+
+                <!-- Tour Package Card -->
+                <div class="p-2 rounded d-flex gap-2 align-items-center" style="background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+                  <div class="rounded p-2 text-center text-lime" style="background: var(--accent-lime-dim); width: 44px;">
+                    <i class="bi bi-airplane fs-5"></i>
+                  </div>
+                  <div>
+                    <div class="fw-semibold text-white small">Bali Island Escapade</div>
+                    <div class="text-muted-custom" style="font-size: 0.72rem;">Flight + 5 Star Resort + Visa</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PROJECT 02: SUBSOURCETRACKING -->
+      <div class="project-card-editorial" data-category="mobile enterprise" data-aos="fade-up">
+        <div class="row g-0 flex-lg-row-reverse">
+          
+          <div class="col-lg-7 project-content-pane">
+            <div class="project-index-number">PROJECT 02 / 04</div>
+            <div class="project-category-tag">WORKFORCE & GPS GEOLOCATION TECHNOLOGY</div>
+            <h3 class="project-name">SubSourceTracking — Field Workforce Tracking</h3>
+            <p class="project-desc">
+              An enterprise-grade workforce tracking application enabling employee geofenced clock-in and clock-out, break interval auditing, shift schedule management, and continuous low-battery background GPS location telemetry.
+            </p>
+
+            <div class="contribution-box">
+              <h6>MY VERIFIED CONTRIBUTIONS</h6>
+              <ul class="contribution-list">
+                <li>Engineered battery-optimized background GPS tracking algorithm maintaining continuous auditing without excessive battery depletion.</li>
+                <li>Developed geofenced clock-in and clock-out triggers verifying employee presence within assigned project perimeters.</li>
+                <li>Constructed shift breakdown timeline displaying break intervals, overtime calculations, and manager approvals.</li>
+                <li>Implemented offline-first queue mechanism caching location pings and auto-syncing when network connectivity restores.</li>
+              </ul>
+            </div>
+
+            <div class="project-tech-stack">
+              <span class="project-tech-pill">React Native</span>
+              <span class="project-tech-pill">Background Geolocation</span>
+              <span class="project-tech-pill">Mapbox / Google Maps</span>
+              <span class="project-tech-pill">REST APIs</span>
+              <span class="project-tech-pill">Secure Storage</span>
+            </div>
+
+            <div>
+              <button class="btn-prime view-case-study-btn" data-project-id="subsource-tracking">
+                View Case Study <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Realistic Mobile UI Mockup -->
+          <div class="col-lg-5 project-visual-pane" style="border-right: 1px solid var(--border-subtle); border-left: none;">
+            <div class="mockup-card-phone">
+              <div class="phone-notch" style="width: 80px; height: 18px; margin: 8px auto 4px;"></div>
+              
+              <div class="screen-header-bar">
+                <span>9:41</span>
+                <span class="text-emerald font-mono">GPS TELEMETRY</span>
+                <span><i class="bi bi-geo-alt-fill text-emerald"></i></span>
+              </div>
+
+              <div class="screen-body-app">
+                <!-- Live Map Mockup -->
+                <div class="p-3 rounded mb-3 text-center" style="background: #060907; border: 1px solid var(--accent-emerald-dim); position: relative; height: 160px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                  <div class="pulse-dot" style="background: var(--accent-emerald); width: 14px; height: 14px; margin-bottom: 8px;"></div>
+                  <div class="font-mono text-emerald fw-bold small">GEOFENCE ACTIVE: SITE 4B</div>
+                  <div class="text-muted-custom" style="font-size: 0.72rem;">Lat: 28.6139° N, Long: 77.2090° E</div>
+                  <span class="badge-mini mt-2" style="background: rgba(33, 199, 122, 0.2); color: #21C77A;">Accuracy: ±3 meters</span>
+                </div>
+
+                <!-- Punch-in Clock Status -->
+                <div class="p-3 rounded mb-2" style="background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="text-muted small">Shift Timer</span>
+                    <span class="text-emerald font-mono small">IN PROGRESS</span>
+                  </div>
+                  <div class="fs-4 fw-bold text-white mb-2 font-mono">06h : 42m : 18s</div>
+                  <div class="d-flex gap-2">
+                    <div class="p-2 rounded flex-fill text-center small text-white" style="background: #1b2620;">Break: 45m</div>
+                    <div class="p-2 rounded flex-fill text-center small text-emerald fw-semibold" style="background: rgba(33, 199, 122, 0.15);">Clock-out Ready</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PROJECT 03: INSTACLONE -->
+      <div class="project-card-editorial" data-category="mobile social" data-aos="fade-up">
+        <div class="row g-0">
+          
+          <div class="col-lg-7 project-content-pane">
+            <div class="project-index-number">PROJECT 03 / 04</div>
+            <div class="project-category-tag">SOCIAL MEDIA APPLICATION</div>
+            <h3 class="project-name">InstaClone — Social Media Platform</h3>
+            <p class="project-desc">
+              A full-featured social media mobile application featuring user authentication, real-time posts feed, high-resolution media upload pipelines via Cloudinary, and dynamic follow/unfollow functionality with Firestore.
+            </p>
+
+            <div class="contribution-box">
+              <h6>MY VERIFIED CONTRIBUTIONS</h6>
+              <ul class="contribution-list">
+                <li>Constructed high-speed media upload pipeline using Cloudinary for client-side compression and adaptive streaming.</li>
+                <li>Built real-time interactive feed leveraging Firestore snapshot listeners with optimistic like and bookmark updates.</li>
+                <li>Implemented secure biometric & email authentication flows with session state preservation.</li>
+                <li>Architected smooth gesture-driven image carousels and profile grids matching native 60fps standards.</li>
+              </ul>
+            </div>
+
+            <div class="project-tech-stack">
+              <span class="project-tech-pill">React Native</span>
+              <span class="project-tech-pill">Firebase Auth</span>
+              <span class="project-tech-pill">Cloud Firestore</span>
+              <span class="project-tech-pill">Cloudinary</span>
+              <span class="project-tech-pill">React Navigation</span>
+            </div>
+
+            <div>
+              <button class="btn-prime view-case-study-btn" data-project-id="instaclone">
+                View Case Study <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Realistic Mobile UI Mockup -->
+          <div class="col-lg-5 project-visual-pane">
+            <div class="mockup-card-phone">
+              <div class="phone-notch" style="width: 80px; height: 18px; margin: 8px auto 4px;"></div>
+              
+              <div class="screen-header-bar">
+                <span>9:41</span>
+                <span class="text-white font-mono fw-bold">InstaClone</span>
+                <span><i class="bi bi-chat-dots"></i></span>
+              </div>
+
+              <div class="screen-body-app">
+                <!-- Stories Carousel -->
+                <div class="d-flex gap-2 mb-3 pb-2 border-bottom border-dark overflow-hidden">
+                  <div class="text-center">
+                    <div class="rounded-circle p-1 mb-1" style="width: 44px; height: 44px; border: 2px solid var(--accent-lime); background: #1a221d;"></div>
+                    <span style="font-size: 0.65rem;">Your Story</span>
+                  </div>
+                  <div class="text-center">
+                    <div class="rounded-circle p-1 mb-1" style="width: 44px; height: 44px; border: 2px solid #666; background: #1a221d;"></div>
+                    <span style="font-size: 0.65rem;">Alex</span>
+                  </div>
+                  <div class="text-center">
+                    <div class="rounded-circle p-1 mb-1" style="width: 44px; height: 44px; border: 2px solid #666; background: #1a221d;"></div>
+                    <span style="font-size: 0.65rem;">DesignLab</span>
+                  </div>
+                </div>
+
+                <!-- Feed Post Item -->
+                <div class="p-2 rounded" style="background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <div class="rounded-circle" style="width: 28px; height: 28px; background: var(--accent-lime-dim);"></div>
+                    <div>
+                      <div class="fw-semibold text-white" style="font-size: 0.75rem;">creative_dev</div>
+                      <div class="text-muted" style="font-size: 0.65rem;">React Native &middot; 2h ago</div>
+                    </div>
+                  </div>
+
+                  <div class="rounded mb-2 d-flex align-items-center justify-content-center text-muted" style="height: 120px; background: #131A16; border: 1px solid var(--border-subtle);">
+                    <i class="bi bi-image fs-1 text-lime"></i>
+                  </div>
+
+                  <div class="d-flex justify-content-between text-muted fs-6 mb-1">
+                    <div class="d-flex gap-3">
+                      <span class="text-danger"><i class="bi bi-heart-fill"></i> 1.2k</span>
+                      <span><i class="bi bi-chat"></i> 84</span>
+                    </div>
+                    <span><i class="bi bi-bookmark"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PROJECT 04: ENTICR -->
+      <div class="project-card-editorial" data-category="mobile" data-aos="fade-up">
+        <div class="row g-0 flex-lg-row-reverse">
+          
+          <div class="col-lg-7 project-content-pane">
+            <div class="project-index-number">PROJECT 04 / 04</div>
+            <div class="project-category-tag">MOBILE APPLICATION ARCHITECTURE</div>
+            <h3 class="project-name">Enticr — Modern Mobile Experience</h3>
+            <p class="project-desc">
+              A modular React Native mobile experience engineered for dynamic user engagement, personalized content discovery, strict TypeScript typing, and resilient API consumption.
+            </p>
+
+            <div class="contribution-box">
+              <h6>MY VERIFIED CONTRIBUTIONS</h6>
+              <ul class="contribution-list">
+                <li>Created fully responsive component design library with strict TypeScript types and standardized tokens.</li>
+                <li>Engineered smooth micro-interactions and transitions with React Native Reanimated.</li>
+                <li>Built resilient error-handling boundaries and graceful network degradation handlers.</li>
+                <li>Optimized app bundle size and cold-start launch times on physical Android and iOS devices.</li>
+              </ul>
+            </div>
+
+            <div class="project-tech-stack">
+              <span class="project-tech-pill">React Native</span>
+              <span class="project-tech-pill">TypeScript</span>
+              <span class="project-tech-pill">REST Architecture</span>
+              <span class="project-tech-pill">Context API</span>
+              <span class="project-tech-pill">Reanimated</span>
+            </div>
+
+            <div>
+              <button class="btn-prime view-case-study-btn" data-project-id="enticr">
+                View Case Study <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Realistic Mobile UI Mockup -->
+          <div class="col-lg-5 project-visual-pane" style="border-right: 1px solid var(--border-subtle); border-left: none;">
+            <div class="mockup-card-phone">
+              <div class="phone-notch" style="width: 80px; height: 18px; margin: 8px auto 4px;"></div>
+              
+              <div class="screen-header-bar">
+                <span>9:41</span>
+                <span class="text-lime font-mono">ENTICR APP</span>
+                <span><i class="bi bi-sliders"></i></span>
+              </div>
+
+              <div class="screen-body-app">
+                <div class="p-3 rounded mb-3" style="background: linear-gradient(135deg, #1A2620 0%, #111A15 100%); border: 1px solid var(--border-accent);">
+                  <div class="font-mono text-lime small mb-1">INTERACTIVE EXPERIENCE</div>
+                  <div class="fs-5 fw-bold text-white mb-2">Curated Discovery</div>
+                  <p class="text-muted small mb-0">Fluid gestures, strict TypeScript types, and seamless responsive state handling.</p>
+                </div>
+
+                <div class="p-3 rounded" style="background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+                  <div class="d-flex justify-content-between text-muted small mb-2">
+                    <span>Performance Rating</span>
+                    <span class="text-lime font-mono">99.8%</span>
+                  </div>
+                  <div class="progress" style="height: 6px; background: #222;">
+                    <div class="progress-bar" style="width: 98%; background: var(--accent-lime);"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SERVICES SECTION
+       ========================================================================= -->
+  <section class="services-section" id="services">
+    <div class="container">
+      
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">04 — CAPABILITIES</span>
+        <h2 class="section-title">What I Can Build For You</h2>
+        <p class="section-desc mx-auto">
+          Tailored mobile development services ranging from ground-up app engineering to background location tracking and performance profiling.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- 01 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card">
+            <div>
+              <div class="service-num">01 / SERVICE</div>
+              <div class="service-icon-box"><i class="bi bi-phone"></i></div>
+              <h4 class="service-title">React Native Application Development</h4>
+              <p class="service-desc">
+                End-to-end development of high-performance mobile apps from clean architectural blueprints to native device builds.
+              </p>
+            </div>
+            <div class="font-mono text-lime small pt-3 border-top border-dark">Cross-Platform Android & iOS</div>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="service-card">
+            <div>
+              <div class="service-num">02 / SERVICE</div>
+              <div class="service-icon-box"><i class="bi bi-apple"></i></div>
+              <h4 class="service-title">Android & iOS Development</h4>
+              <p class="service-desc">
+                Unified codebases delivering authentic native look and feel on both Apple iOS and Google Android platforms without duplicated overhead.
+              </p>
+            </div>
+            <div class="font-mono text-lime small pt-3 border-top border-dark">Native Look & Feel</div>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card">
+            <div>
+              <div class="service-num">03 / SERVICE</div>
+              <div class="service-icon-box"><i class="bi bi-arrow-left-right"></i></div>
+              <h4 class="service-title">REST API Integration</h4>
+              <p class="service-desc">
+                Robust data communication layers, secure JWT/OAuth session handling, pagination, and real-time WebSocket / REST syncing.
+              </p>
+            </div>
+            <div class="font-mono text-lime small pt-3 border-top border-dark">Secure Data Layer</div>
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+          <div class="service-card">
+            <div>
+              <div class="service-num">04 / SERVICE</div>
+              <div class="service-icon-box"><i class="bi bi-fire"></i></div>
+              <h4 class="service-title">Firebase Integration</h4>
+              <p class="service-desc">
+                Complete Firebase ecosystems: Authentication, Cloud Firestore, Realtime Database, Cloud Messaging, and Storage.
+              </p>
+            </div>
+            <div class="font-mono text-lime small pt-3 border-top border-dark">Auth & Realtime Firestore</div>
+          </div>
+        </div>
+
+        <!-- 05 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card">
+            <div>
+              <div class="service-num">05 / SERVICE</div>
+              <div class="service-icon-box"><i class="bi bi-geo-alt"></i></div>
+              <h4 class="service-title">GPS & Location Tracking</h4>
+              <p class="service-desc">
+                Production-grade background geolocation, geofencing triggers, live tracking maps, and battery-efficient motion telemetry.
+              </p>
+            </div>
+            <div class="font-mono text-lime small pt-3 border-top border-dark">Battery-Optimized Telemetry</div>
+          </div>
+        </div>
+
+        <!-- 06 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
+          <div class="service-card">
+            <div>
+              <div class="service-num">06 / SERVICE</div>
+              <div class="service-icon-box"><i class="bi bi-palette"></i></div>
+              <h4 class="service-title">Mobile App UI Implementation</h4>
+              <p class="service-desc">
+                Pixel-perfect conversion of Figma/Adobe XD designs into responsive, accessible, 60fps mobile component hierarchies.
+              </p>
+            </div>
+            <div class="font-mono text-lime small pt-3 border-top border-dark">Pixel-Perfect Conversion</div>
+          </div>
+        </div>
+
+        <!-- 07 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-card">
+            <div>
+              <div class="service-num">07 / SERVICE</div>
+              <div class="service-icon-box"><i class="bi bi-tools"></i></div>
+              <h4 class="service-title">App Maintenance & Bug Fixing</h4>
+              <p class="service-desc">
+                Performance bottleneck resolution, memory leak auditing, native dependency upgrades, and crash analytics triage.
+              </p>
+            </div>
+            <div class="font-mono text-lime small pt-3 border-top border-dark">Profiling & Optimization</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       DEVELOPMENT PROCESS SECTION ("From Idea to Application")
+       ========================================================================= -->
+  <section class="process-section" id="process">
+    <div class="container">
+      
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">05 — METHODOLOGY</span>
+        <h2 class="section-title">From Idea to Application</h2>
+        <p class="section-desc mx-auto">
+          A disciplined, step-by-step product engineering pipeline designed for zero-surprises and production stability.
+        </p>
+      </div>
+
+      <div class="process-timeline">
+        
+        <!-- Step 01 -->
+        <div class="process-step-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="process-number">01</div>
+          <h4 class="process-step-title">Understand</h4>
+          <div class="process-step-sub">Requirements & Scope</div>
+          <p class="process-desc">
+            Deconstruct core product goals, target user personas, technical constraints, and define concrete milestones before writing code.
+          </p>
+        </div>
+
+        <!-- Step 02 -->
+        <div class="process-step-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="process-number">02</div>
+          <h4 class="process-step-title">Design</h4>
+          <div class="process-step-sub">Architecture & UX</div>
+          <p class="process-desc">
+            Plan screen navigation hierarchies, state models, data schemas, and establish design system tokens for consistent aesthetics.
+          </p>
+        </div>
+
+        <!-- Step 03 -->
+        <div class="process-step-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="process-number">03</div>
+          <h4 class="process-step-title">Develop</h4>
+          <div class="process-step-sub">Clean Engineering</div>
+          <p class="process-desc">
+            Build clean, reusable React Native components, integrate secure REST/Firebase backends, and maintain strict TypeScript safety.
+          </p>
+        </div>
+
+        <!-- Step 04 -->
+        <div class="process-step-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="process-number">04</div>
+          <h4 class="process-step-title">Test</h4>
+          <div class="process-step-sub">Profiling & QA</div>
+          <p class="process-desc">
+            Audit performance on physical Android and iOS hardware, profile JS/UI threads at 60fps, and test edge-case network conditions.
+          </p>
+        </div>
+
+        <!-- Step 05 -->
+        <div class="process-step-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="process-number">05</div>
+          <h4 class="process-step-title">Launch</h4>
+          <div class="process-step-sub">EAS & Deployment</div>
+          <p class="process-desc">
+            Generate optimized release bundles, configure store assets, certificates, and manage deployment to Google Play and Apple App Store.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       WORK EXPERIENCE TIMELINE
+       ========================================================================= -->
+  <section class="experience-section" id="experience">
+    <div class="container">
+      
+      <div class="row g-5">
+        
+        <div class="col-lg-4" data-aos="fade-up">
+          <span class="section-label">06 — CHRONOLOGY</span>
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-desc">
+            A track record of engineering cross-platform mobile apps for client-facing and enterprise products.
+          </p>
+          <div class="p-3 rounded mt-4" style="background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+            <div class="fw-semibold text-white mb-1"><i class="bi bi-info-circle text-lime me-2"></i>Editable Data Source</div>
+            <div class="text-muted-custom small">Company names, dates and responsibilities are maintained centrally in <code class="text-lime">portfolio-data.js</code>.</div>
+          </div>
+        </div>
+
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="150">
+          <div class="experience-timeline">
+            
+            <!-- Experience Item 1 -->
+            <div class="exp-item">
+              <div class="exp-card">
+                <div class="exp-meta-bar">
+                  <span class="exp-period">2024 — PRESENT</span>
+                  <span class="exp-badge">CURRENT ROLE</span>
+                </div>
+                <h3 class="exp-role">React Native Developer</h3>
+                <div class="exp-company">Mobile Engineering Studio &middot; Client Products</div>
+                <p class="mb-3 text-secondary">
+                  Leading mobile engineering across multiple real-world React Native products including travel booking systems, workforce geolocation tracking platforms, and consumer social apps. Implementing performant architectures, custom hooks, and EAS release pipelines.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="project-tech-pill">React Native</span>
+                  <span class="project-tech-pill">Expo</span>
+                  <span class="project-tech-pill">TypeScript</span>
+                  <span class="project-tech-pill">REST APIs</span>
+                  <span class="project-tech-pill">Firebase</span>
+                  <span class="project-tech-pill">EAS Build</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience Item 2 -->
+            <div class="exp-item">
+              <div class="exp-card">
+                <div class="exp-meta-bar">
+                  <span class="exp-period">2022 — 2024</span>
+                  <span class="exp-badge">CORE MOBILE</span>
+                </div>
+                <h3 class="exp-role">Associate Mobile Developer</h3>
+                <div class="exp-company">Software Development Services</div>
+                <p class="mb-3 text-secondary">
+                  Developed and shipped cross-platform Android and iOS features. Integrated backend REST APIs, implemented authentication flows, crafted complex navigation stacks, and diagnosed device-specific rendering issues.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="project-tech-pill">React Native</span>
+                  <span class="project-tech-pill">JavaScript (ES6+)</span>
+                  <span class="project-tech-pill">React.js</span>
+                  <span class="project-tech-pill">Firebase</span>
+                  <span class="project-tech-pill">Android Studio</span>
+                  <span class="project-tech-pill">Xcode</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CONTACT SECTION
+       ========================================================================= -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      
+      <div class="contact-card-box" data-aos="fade-up">
+        <div class="row g-5 align-items-center">
+          
+          <!-- Left CTA Column -->
+          <div class="col-lg-6">
+            <span class="section-label">07 — LET'S WORK TOGETHER</span>
+            <h2 class="section-title">Have an Idea? Let's Build Something Great.</h2>
+            <p class="section-desc mb-4">
+              Have a mobile application idea or need help improving an existing product? Let's discuss how we can bring it to life.
+            </p>
+
+            <div class="d-flex flex-column gap-3 mb-4">
+              
+              <!-- Direct Email -->
+              <div class="d-flex align-items-center gap-3">
+                <div class="footer-social-link"><i class="bi bi-envelope text-lime"></i></div>
+                <div>
+                  <div class="font-mono text-muted-custom small">DIRECT EMAIL</div>
+                  <a href="mailto:sushantthakur.dev@gmail.com" class="text-white fw-semibold">sushantthakur.dev@gmail.com</a>
+                </div>
+              </div>
+
+              <!-- LinkedIn -->
+              <div class="d-flex align-items-center gap-3">
+                <div class="footer-social-link"><i class="bi bi-linkedin text-lime"></i></div>
+                <div>
+                  <div class="font-mono text-muted-custom small">LINKEDIN PROFILE</div>
+                  <a href="https://www.linkedin.com/in/sushant-thakur-053261259/" target="_blank" rel="noopener noreferrer" class="text-white fw-semibold">linkedin.com/in/sushant-thakur-053261259</a>
+                </div>
+              </div>
+
+              <!-- GitHub -->
+              <div class="d-flex align-items-center gap-3">
+                <div class="footer-social-link"><i class="bi bi-github text-lime"></i></div>
+                <div>
+                  <div class="font-mono text-muted-custom small">GITHUB REPOSITORY</div>
+                  <a href="https://github.com/sushantonit3652" target="_blank" rel="noopener noreferrer" class="text-white fw-semibold">github.com/sushantonit3652</a>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="d-flex gap-3">
+              <button class="btn-ghost" data-bs-toggle="modal" data-bs-target="#resumeModal">
+                <i class="bi bi-file-earmark-person"></i> View Resume
+              </button>
+              <a href="https://www.linkedin.com/in/sushant-thakur-053261259/" target="_blank" rel="noopener noreferrer" class="btn-ghost">
+                LinkedIn Message <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Validated Contact Form -->
+          <div class="col-lg-6">
+            <form id="portfolioContactForm" class="p-4 rounded" style="background: var(--bg-secondary); border: 1px solid var(--border-subtle);">
+              
+              <div class="mb-3">
+                <label for="contactName" class="form-label-custom">Your Name *</label>
+                <input type="text" id="contactName" class="form-control-custom" placeholder="e.g. Rahul Sharma" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="contactEmail" class="form-label-custom">Your Email *</label>
+                <input type="email" id="contactEmail" class="form-control-custom" placeholder="e.g. rahul@company.com" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="contactSubject" class="form-label-custom">Subject / Project Scope</label>
+                <input type="text" id="contactSubject" class="form-control-custom" placeholder="e.g. New React Native Mobile App Inquiry">
+              </div>
+
+              <div class="mb-4">
+                <label for="contactMessage" class="form-label-custom">Message *</label>
+                <textarea id="contactMessage" rows="4" class="form-control-custom" placeholder="Tell me about your mobile product, timeline and requirements..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-prime w-100 justify-content-center">
+                Send Message <i class="bi bi-send-fill ms-1"></i>
+              </button>
+
+              <!-- Feedback box -->
+              <div id="contactFeedback" class="contact-feedback"></div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      
+      <div>
+        <span class="brand-monogram">SUSHANT THAKUR <span>/ ST.</span></span>
+        <div class="text-muted-custom small mt-1">Digital Product Engineer &middot; React Native Specialist</div>
+      </div>
+
+      <div class="text-muted-custom small text-center">
+        &copy; 2026 Sushant Thakur. All rights reserved. Built with precision & clean code.
+      </div>
+
+      <div class="footer-social-links">
+        <a href="https://github.com/sushantonit3652" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sushant-thakur-053261259/" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="mailto:sushantthakur.dev@gmail.com" class="footer-social-link" title="Email">
+          <i class="bi bi-envelope"></i>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button class="scroll-top-btn" aria-label="Scroll to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- =========================================================================
+       CASE STUDY MODAL
+       ========================================================================= -->
+  <div class="modal fade" id="caseStudyModal" tabindex="-1" aria-labelledby="caseStudyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-custom">
+        
+        <div class="modal-header modal-header-custom d-flex justify-content-between align-items-center">
+          <div>
+            <div id="modalProjectNumber" class="font-mono text-lime small">PROJECT 01</div>
+            <h4 class="modal-title fw-bold text-white mb-0" id="modalProjectTitle">Project Title</h4>
+            <div id="modalProjectCategory" class="text-muted-custom small font-mono">Category</div>
+          </div>
+          <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+
+        <div class="modal-body modal-body-custom">
+          
+          <h6 class="font-mono text-lime mb-2">SYSTEM OVERVIEW</h6>
+          <p id="modalProjectOverview" class="text-secondary mb-4"></p>
+
+          <h6 class="font-mono text-lime mb-2">KEY APPLICATION SCREENS</h6>
+          <div class="row g-3 mb-4" id="modalScreens"></div>
+
+          <h6 class="font-mono text-lime mb-2">ENGINEERING CONTRIBUTIONS</h6>
+          <ul class="contribution-list mb-4" id="modalContributions"></ul>
+
+          <h6 class="font-mono text-lime mb-2">TECHNOLOGY STACK</h6>
+          <div class="d-flex flex-wrap gap-2 mb-4" id="modalTechStack"></div>
+
+          <div class="p-3 rounded d-flex justify-content-between align-items-center" style="background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+            <div>
+              <div class="fw-semibold text-white small">Interested in a similar architecture?</div>
+              <div class="text-muted small">Let's discuss how we can tailor this for your product.</div>
+            </div>
+            <a href="#contact" data-bs-dismiss="modal" class="btn-prime py-2 px-3 fs-6">Let's Talk</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       RESUME MODAL
+       ========================================================================= -->
+  <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-custom">
+        
+        <div class="modal-header modal-header-custom d-flex justify-content-between align-items-center">
+          <div>
+            <div class="font-mono text-lime small">VERIFIED CURRICULUM VITAE</div>
+            <h4 class="modal-title fw-bold text-white mb-0">Sushant Thakur — Resume</h4>
+            <div class="text-muted-custom small font-mono">React Native Developer &middot; ~2.6 Years Experience</div>
+          </div>
+          <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+
+        <div class="modal-body modal-body-custom">
+          
+          <!-- Printable / Styled Resume Body -->
+          <div class="p-4 rounded mb-4" style="background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+            <div class="d-flex justify-content-between align-items-start border-bottom border-dark pb-3 mb-3">
+              <div>
+                <h3 class="fw-bold text-white mb-1">SUSHANT THAKUR</h3>
+                <div class="text-lime font-mono">React Native Developer / Digital Product Engineer</div>
+                <div class="text-muted small mt-1">India &middot; sushantthakur.dev@gmail.com</div>
+              </div>
+              <div class="text-end font-mono text-muted small">
+                <div>Experience: ~2.6 Years</div>
+                <div>Status: Available</div>
+              </div>
+            </div>
+
+            <h6 class="font-mono text-lime mb-2">PROFESSIONAL SUMMARY</h6>
+            <p class="text-secondary small mb-3">
+              React Native Developer with 2.6+ years of verified software development experience, specializing in cross-platform Android and iOS mobile application architecture. Proven track record in travel booking engines, workforce background GPS tracking, and real-time social applications.
+            </p>
+
+            <h6 class="font-mono text-lime mb-2">TECHNICAL COMPETENCIES</h6>
+            <div class="text-secondary small mb-3">
+              <strong>Mobile:</strong> React Native, Expo, React.js, JavaScript (ES6+), TypeScript<br>
+              <strong>Backend & Data:</strong> Firebase Auth, Cloud Firestore, REST APIs, Cloudinary, Node.js Fundamentals<br>
+              <strong>Workflow & Tools:</strong> Git, GitHub, EAS Build, Android Studio, Xcode, VS Code
+            </div>
+
+            <h6 class="font-mono text-lime mb-2">PROMINENT REAL-WORLD PROJECTS</h6>
+            <ul class="text-secondary small ps-3 mb-0">
+              <li><strong>Airopass:</strong> Travel booking application with visa desk, digital wallet, and partner portal.</li>
+              <li><strong>SubSourceTracking:</strong> Enterprise workforce tracking with background geolocation and geofenced attendance.</li>
+              <li><strong>InstaClone:</strong> High-throughput media social platform with Firebase Firestore & Cloudinary.</li>
+              <li><strong>Enticr:</strong> Modular React Native mobile application with strict TypeScript architecture.</li>
+            </ul>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn-ghost" onclick="window.print()">
+              <i class="bi bi-printer me-1"></i> Print / Save as PDF
+            </button>
+            <a href="mailto:sushantthakur.dev@gmail.com?subject=Resume%20Inquiry%20-%20Sushant%20Thakur" class="btn-prime">
+              Request Full Document <i class="bi bi-envelope ms-1"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Vendor Scripts -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Centralized Portfolio Configuration & Engine -->
+  <script src="assets/js/portfolio-data.js"></script>
+  <script src="assets/js/portfolio.js"></script>
+
+</body>
+
+</html>
