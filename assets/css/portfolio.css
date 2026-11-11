@@ -41,7 +41,7 @@
   --radius-xl: 32px;
 }
 
-/* Light Mode Overrides (when requested) */
+/* Light Mode Overrides */
 [data-theme="light"] {
   --bg-primary: #F4F6F4;
   --bg-secondary: #E8ECE8;
@@ -87,7 +87,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Noise & Technical Grid Background Overlay */
+/* Noise & Technical Grid Overlay */
 body::before {
   content: "";
   position: fixed;
@@ -201,7 +201,7 @@ a {
   }
 }
 
-/* Header & Navigation */
+/* Navigation */
 .site-navbar {
   position: fixed;
   top: 0;
@@ -276,7 +276,7 @@ a {
 .nav-links-desktop {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.8rem;
   list-style: none;
   margin: 0;
   padding: 0.4rem 1.2rem;
@@ -369,6 +369,28 @@ a {
   transform: translateY(-2px);
 }
 
+.btn-store {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  background: rgba(198, 255, 77, 0.1);
+  border: 1px solid var(--accent-lime);
+  color: var(--accent-lime) !important;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: var(--transition-smooth);
+}
+
+.btn-store:hover {
+  background: var(--accent-lime);
+  color: #080B0A !important;
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(198, 255, 77, 0.35);
+}
+
 .theme-toggle-btn {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
@@ -388,7 +410,6 @@ a {
   border-color: var(--border-accent);
 }
 
-/* Mobile Nav Toggle */
 .mobile-toggle-btn {
   display: none;
   background: var(--bg-surface);
@@ -427,9 +448,7 @@ a {
   box-shadow: -15px 0 50px rgba(0, 0, 0, 0.7);
 }
 
-.mobile-drawer.open {
-  right: 0;
-}
+.mobile-drawer.open { right: 0; }
 
 .drawer-overlay {
   position: fixed;
@@ -450,7 +469,7 @@ a {
   visibility: visible;
 }
 
-/* Section Common Styling */
+/* Section Common */
 section {
   position: relative;
   padding: 7rem 0;
@@ -582,16 +601,16 @@ section {
   padding: 2rem 0;
 }
 
-/* Smartphone Mockup Frame */
+/* Smartphone Mockup Frame with Real Screenshot */
 .phone-mockup-frame {
   width: 310px;
-  height: 600px;
-  background: #0D1210;
-  border-radius: 44px;
+  height: 620px;
+  background: #000;
+  border-radius: 46px;
   border: 8px solid #202A24;
   box-shadow: 
-    0 25px 60px rgba(0, 0, 0, 0.75),
-    0 0 40px rgba(198, 255, 77, 0.08),
+    0 25px 60px rgba(0, 0, 0, 0.85),
+    0 0 45px rgba(198, 255, 77, 0.12),
     inset 0 0 10px rgba(255, 255, 255, 0.05);
   position: relative;
   overflow: hidden;
@@ -599,115 +618,29 @@ section {
   flex-direction: column;
 }
 
-/* Notch / Dynamic Island */
-.phone-notch {
-  width: 105px;
-  height: 22px;
-  background: #000;
-  border-radius: 14px;
-  margin: 10px auto 6px;
-  position: relative;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.phone-notch::after {
-  content: "";
-  width: 9px;
-  height: 9px;
-  background: #111e16;
-  border: 1px solid #2a3d31;
-  border-radius: 50%;
-  margin-left: 55px;
-}
-
-/* Phone Screen Content */
-.phone-screen-body {
-  padding: 12px 16px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  font-family: var(--font-body);
-}
-
-.phone-app-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-  padding-bottom: 8px;
-}
-
-.phone-app-header .app-logo {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--text-primary);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.phone-card-feature {
-  background: linear-gradient(135deg, #18251F 0%, #111A15 100%);
-  border: 1px solid var(--border-subtle);
-  border-radius: 16px;
-  padding: 14px;
-  position: relative;
-  overflow: hidden;
-}
-
-.phone-card-feature::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
+.phone-screen-img {
+  width: 100%;
   height: 100%;
-  background: var(--accent-lime);
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 36px;
 }
 
-.phone-card-feature .badge-mini {
-  display: inline-block;
-  font-size: 0.65rem;
-  font-family: var(--font-mono);
-  background: var(--accent-lime-dim);
-  color: var(--accent-lime);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.phone-card-feature h5 {
-  font-size: 0.9rem;
-  margin-bottom: 4px;
-}
-
-.phone-card-feature p {
-  font-size: 0.72rem;
-  line-height: 1.35;
-  margin-bottom: 8px;
-}
-
-/* Live Floating Code Snippet Card */
+/* Floating Code Snippet Card */
 .floating-code-card {
   position: absolute;
-  bottom: 40px;
+  bottom: 30px;
   left: -40px;
-  background: rgba(14, 20, 17, 0.92);
-  backdrop-filter: blur(12px);
+  background: rgba(14, 20, 17, 0.94);
+  backdrop-filter: blur(14px);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 14px 18px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
   font-family: var(--font-mono);
   font-size: 0.76rem;
   z-index: 20;
-  min-width: 260px;
+  min-width: 270px;
 }
 
 .code-header-dots {
@@ -730,8 +663,8 @@ section {
   position: absolute;
   top: 50px;
   right: -30px;
-  background: rgba(17, 23, 20, 0.94);
-  backdrop-filter: blur(12px);
+  background: rgba(17, 23, 20, 0.95);
+  backdrop-filter: blur(14px);
   border: 1px solid var(--border-accent);
   border-radius: var(--radius-md);
   padding: 12px 18px;
@@ -743,8 +676,8 @@ section {
 }
 
 .metric-circle {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: var(--accent-lime-dim);
   border: 2px solid var(--accent-lime);
@@ -758,7 +691,7 @@ section {
 }
 
 /* ==========================================================================
-   ABOUT ME SECTION (Editorial Split)
+   ABOUT ME SECTION
    ========================================================================== */
 .about-section {
   background: var(--bg-secondary);
@@ -820,7 +753,6 @@ section {
   color: var(--text-muted);
 }
 
-/* Architectural Pillars */
 .arch-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
@@ -949,7 +881,7 @@ section {
 }
 
 /* ==========================================================================
-   FEATURED PROJECTS SECTION
+   FEATURED PROJECTS SECTION (With Real Photos & Store Links)
    ========================================================================== */
 .project-filters {
   display: flex;
@@ -978,7 +910,6 @@ section {
   font-weight: 600;
 }
 
-/* Editorial Project Card */
 .project-card-editorial {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
@@ -1089,9 +1020,9 @@ section {
   border-radius: var(--radius-sm);
 }
 
-/* Interactive Realistic Mobile UI Visualizer */
+/* Real Screenshot Showcase Pane */
 .project-visual-pane {
-  background: linear-gradient(145deg, #0C120F 0%, #131C18 100%);
+  background: linear-gradient(145deg, #0A0F0D 0%, #121A16 100%);
   border-left: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
@@ -1108,38 +1039,74 @@ section {
   }
 }
 
-/* Realistic Smartphone Screen inside Card */
+/* Phone Frame Displaying Real App Photo */
 .mockup-card-phone {
   width: 280px;
-  height: 520px;
-  background: #090E0C;
-  border-radius: 36px;
-  border: 6px solid #1E2822;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8);
+  height: 540px;
+  background: #000;
+  border-radius: 40px;
+  border: 7px solid #1E2822;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85);
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
-.screen-header-bar {
+.mockup-card-phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* App Store Badge Pill */
+.app-badge-verified {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(17, 23, 20, 0.92);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-accent);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 8px 16px 4px;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--text-muted);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--accent-lime);
+  z-index: 10;
 }
 
-.screen-body-app {
-  padding: 14px;
-  flex: 1;
-  overflow-y: auto;
-  scrollbar-width: none;
+/* Thumbnail Gallery strip */
+.thumb-strip {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
-.screen-body-app::-webkit-scrollbar { display: none; }
+.thumb-item {
+  width: 60px;
+  height: 90px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.thumb-item:hover, .thumb-item.active {
+  border-color: var(--accent-lime);
+  transform: translateY(-2px);
+}
+
+.thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* ==========================================================================
    SERVICES SECTION
@@ -1204,7 +1171,7 @@ section {
 }
 
 /* ==========================================================================
-   DEVELOPMENT PROCESS ("From Idea to Application")
+   DEVELOPMENT PROCESS
    ========================================================================== */
 .process-timeline {
   display: grid;
@@ -1258,7 +1225,7 @@ section {
 }
 
 /* ==========================================================================
-   WORK EXPERIENCE TIMELINE
+   WORK EXPERIENCE & EDUCATION
    ========================================================================== */
 .experience-timeline {
   position: relative;
@@ -1378,7 +1345,6 @@ section {
   display: block;
 }
 
-/* Feedback Alert */
 .contact-feedback {
   display: none;
   padding: 1rem 1.2rem;
@@ -1434,9 +1400,7 @@ section {
   transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   MODAL STYLING (Case Studies & Resume)
-   ========================================================================== */
+/* Modals */
 .modal-content-custom {
   background: var(--bg-secondary);
   border: 1px solid var(--border-subtle);
@@ -1503,14 +1467,4 @@ section {
   border-color: var(--accent-lime);
   color: var(--accent-lime);
   transform: translateY(-3px);
-}
-
-/* Accessibility Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }

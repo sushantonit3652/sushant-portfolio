@@ -185,22 +185,19 @@ document.addEventListener("DOMContentLoaded", function () {
             .map((c) => `<li>${c}</li>`)
             .join("");
 
-          // Screens
-          const screensContainer = document.getElementById("modalScreens");
-          if (screensContainer && projectData.screens) {
-            screensContainer.innerHTML = projectData.screens
-              .map(
-                (s) => `
-                <div class="col-md-4 mb-3">
-                  <div class="p-3 rounded" style="background: var(--bg-surface); border: 1px solid var(--border-subtle);">
-                    <div class="text-lime fw-bold font-mono mb-1" style="font-size: 0.8rem;">FEATURE</div>
-                    <div class="fw-semibold mb-1" style="font-size: 0.95rem;">${s.title}</div>
-                    <div class="text-muted small" style="font-size: 0.8rem;">${s.subtitle}</div>
-                  </div>
-                </div>
-              `
-              )
-              .join("");
+          // Store action button if live
+          const storeActionContainer = document.getElementById("modalStoreAction");
+          if (storeActionContainer) {
+            if (projectData.liveUrl) {
+              const iconClass = projectData.liveUrl.includes("apple.com") ? "bi-apple" : "bi-google-play";
+              storeActionContainer.innerHTML = `
+                <a href="${projectData.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn-store d-inline-flex align-items-center">
+                  <i class="bi ${iconClass} fs-5 me-1"></i> Open on ${projectData.storeLabel} <i class="bi bi-box-arrow-up-right ms-2"></i>
+                </a>
+              `;
+            } else {
+              storeActionContainer.innerHTML = "";
+            }
           }
 
           bsModal.show();
@@ -240,10 +237,10 @@ document.addEventListener("DOMContentLoaded", function () {
       contactFeedback.className = "contact-feedback success";
       contactFeedback.innerHTML = `
         <div class="fw-bold mb-1"><i class="bi bi-check2-circle me-1"></i> Ready to send!</div>
-        <div>Launching your default email client for <strong>sushantthakur.dev@gmail.com</strong> with your message pre-filled. You can also write directly to Sushant on LinkedIn or GitHub.</div>
+        <div>Launching your default email client for <strong>sushantthakur3211@gmail.com</strong> with your message pre-filled. You can also contact Sushant directly at <strong>+91 7807268475</strong> or on LinkedIn.</div>
       `;
 
-      const mailtoUrl = `mailto:sushantthakur.dev@gmail.com?subject=${encodeURIComponent(
+      const mailtoUrl = `mailto:sushantthakur3211@gmail.com?subject=${encodeURIComponent(
         subject || "Mobile Product Inquiry from Portfolio"
       )}&body=${encodeURIComponent(
         `Hi Sushant,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
