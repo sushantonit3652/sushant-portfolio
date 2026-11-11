@@ -11,23 +11,23 @@ const PORTFOLIO_CONFIG = {
     shortName: "Sushant",
     monogram: "ST.",
     badgeRole: "DIGITAL PRODUCT ENGINEER",
-    headlineRole: "React Native Developer",
+    headlineRole: "React Native & Full-Stack Web Developer",
     availability: "AVAILABLE FOR PROJECTS",
     experienceYears: "2.6+",
     location: "Himachal Pradesh, Chamba, Dalhousie, India",
     phone: "+91 7807268475",
-    summary: "React Native Developer with 2+ years of experience creating high-performing Android & iOS applications using React Native and Expo. Expertise in scalable mobile applications, REST APIs integration, Firebase, Push Notifications, Background Location Tracking, and third-party library integrations.",
+    summary: "React Native & Full-Stack Web Developer with 2+ years of experience engineering mobile apps and web platforms with React.js, Node.js backend, and REST APIs. Production apps deployed to Apple App Store, Google Play, and high-traffic live web domains.",
     aboutHeadline: "Not Just Code. I Build Products.",
     aboutParagraphs: [
-      "I am a React Native Developer specializing in creating high-performing Android & iOS applications. With over 2+ years of verified software development experience, I bring deep expertise in scalable mobile architecture, REST API integrations, and intuitive UI/UX design.",
-      "My production work includes SubSource (Virtual Manager) on the Apple App Store, Securely Sync on the Apple App Store, Biorich International on Google Play, and Airopass Travel & Visa Suite. I excel at implementing complex background geolocation, real-time Firestore synchronization, push notifications, and tamper-resistant offline caching.",
-      "I hold a Bachelor of Science (Non-Medical) from DAV College Dharamshala, and have a proven record of optimizing React Native modules, reducing app cold-start latencies, and delivering reliable 60fps mobile user experiences."
+      "I am a Mobile & Full-Stack Product Engineer specializing in cross-platform Android and iOS development with React Native, alongside web application engineering with React.js and Node.js backends. With over 2+ years of verified software development experience, I bridge creative UI/UX with scalable server and cloud architecture.",
+      "My production work includes SubSource (Virtual Manager) on the Apple App Store, Securely Sync on the Apple App Store, Biorich International on Google Play, the Cinema+ movie ticketing full-stack platform, and Janta Diagnostic Centre (live web portal with Vercel serverless backend).",
+      "I hold a Bachelor of Science (Non-Medical) from DAV College Dharamshala, and have a proven record of optimizing React Native modules, engineering robust Node.js REST APIs, and delivering reliable 60fps mobile user experiences."
     ],
     stats: [
-      { value: "2+", label: "Years Experience", description: "React Native Engineering" },
-      { value: "05+", label: "Production Apps", description: "Live on App Store & Play Store" },
+      { value: "2+", label: "Years Experience", description: "Mobile & Full-Stack Dev" },
+      { value: "06+", label: "Production Projects", description: "App Store, Play Store & Live Web" },
       { value: "60", suffix: "fps", label: "Fluid Performance", description: "Native Smoothness & Micro-interactions" },
-      { value: "100", suffix: "%", label: "Cross-Platform", description: "Unified Android & iOS Codebases" }
+      { value: "100", suffix: "%", label: "Cross-Platform", description: "Mobile (iOS/Android) & Web" }
     ]
   },
 
@@ -39,29 +39,29 @@ const PORTFOLIO_CONFIG = {
     gitHub: "https://github.com/sushantonit3652",
     repoUrl: "https://github.com/sushantonit3652/sushant-portfolio.git",
     resumePdf: "assets/docs/Sushant_Thakur_Resume.pdf",
-    statusText: "Open to High-Impact Mobile Engineering Roles & Freelance Products"
+    statusText: "Open to High-Impact Mobile & Full-Stack Engineering Roles"
   },
 
   skills: {
     mobile: [
       { name: "React Native", level: "Core Expertise", icon: "bi-phone", tag: "Cross-Platform" },
+      { name: "React.js", level: "Production", icon: "bi-code-slash", tag: "Web Applications" },
       { name: "Expo & EAS", level: "Production", icon: "bi-box", tag: "CLI & Cloud Build" },
-      { name: "Flutter & Dart", level: "Familiar", icon: "bi-layers", tag: "Cross-Platform" },
       { name: "JavaScript (ES6+)", level: "Advanced", icon: "bi-filetype-js", tag: "Core Language" },
       { name: "TypeScript", level: "Production", icon: "bi-filetype-ts", tag: "Type Safety" }
     ],
     backend: [
+      { name: "Node.js & Express", level: "Production", icon: "bi-hdd-network", tag: "Backend Server" },
       { name: "Firebase & Firestore", level: "Production", icon: "bi-fire", tag: "Realtime NoSQL & Auth" },
       { name: "Background Geolocation", level: "Expertise", icon: "bi-geo-alt", tag: "GPS & Telemetry" },
-      { name: "REST APIs", level: "Daily", icon: "bi-arrow-left-right", tag: "API Integration" },
-      { name: "Push Notifications", level: "Production", icon: "bi-bell", tag: "FCM & APNs" },
-      { name: "Redux Toolkit & Context", level: "Advanced", icon: "bi-diagram-3", tag: "State Management" }
+      { name: "RESTful APIs", level: "Daily", icon: "bi-arrow-left-right", tag: "API Integration" },
+      { name: "Push Notifications", level: "Production", icon: "bi-bell", tag: "FCM & APNs" }
     ],
     tools: [
       { name: "Git & GitHub", level: "Daily Driver", icon: "bi-git", tag: "Version Control" },
-      { name: "Android Studio", level: "Native Build & Debug", icon: "bi-android2", tag: "Android Tooling" },
-      { name: "Xcode", level: "iOS Build & Debug", icon: "bi-apple", tag: "iOS Tooling" },
-      { name: "VS Code & Postman", level: "Primary IDE", icon: "bi-terminal", tag: "Development" },
+      { name: "Android Studio & Xcode", level: "Native Build & Debug", icon: "bi-terminal", tag: "Mobile Tooling" },
+      { name: "Postman & VS Code", level: "Primary Tools", icon: "bi-braces", tag: "Development" },
+      { name: "Vercel & EAS Cloud", level: "Deployment", icon: "bi-cloud-upload", tag: "CI/CD & Hosting" },
       { name: "Figma UI/UX", level: "Working", icon: "bi-palette", tag: "Interface Design" }
     ]
   },
@@ -93,8 +93,53 @@ const PORTFOLIO_CONFIG = {
       caseStudyAvailable: true
     },
     {
-      id: "airopass",
+      id: "janta-diagnostic",
       number: "02",
+      name: "Janta Diagnostic Centre & Blood Bank",
+      category: "Healthcare Web Portal & Serverless API",
+      filterCategory: "web",
+      liveUrl: "https://www.jantadiagnosticscentre.in/",
+      githubUrl: "https://github.com/sushantonit3652/janta-diagnostic",
+      storeLabel: "Live Website",
+      image: "assets/img/projects/janta-diagnostic.jpg",
+      logo: "assets/img/projects/janta-logo.png",
+      shortDescription: "A full-scale live production healthcare web portal featuring automated diagnostic pathology catalogs, digital X-Ray services, 24x7 blood bank directory, online appointment booking, and Vercel serverless API backend.",
+      longOverview: "Janta Diagnostic Centre is a live production healthcare portal serving Noorpur, Bijnor (UP). It provides real-time test catalogs, digital appointment booking with FormSubmit/Vercel serverless function integrations, digital reports access, and 24x7 emergency blood bank contact directories.",
+      techStack: ["React / HTML5", "JavaScript", "Bootstrap 5", "Vercel Serverless API", "CSS3", "JSON API"],
+      contributions: [
+        "Architected full-responsive healthcare web portal with automated pathology test offerings and dynamic search.",
+        "Engineered serverless backend API on Vercel handling appointment requests, CORS, and email notification forwarding.",
+        "Optimized Lighthouse scores, structured Schema.org MedicalBusiness data, and implemented instant mobile navigation.",
+        "Deployed to custom production domain with SSL and continuous deployment."
+      ],
+      caseStudyAvailable: true
+    },
+    {
+      id: "cinema-plus",
+      number: "03",
+      name: "Cinema+ — Movie Booking & Discovery Platform",
+      category: "Full-Stack Web & Mobile &middot; React + Node.js Backend",
+      filterCategory: "web mobile",
+      liveUrl: "https://github.com/sushantonit3652/cinema",
+      githubUrl: "https://github.com/sushantonit3652/cinema",
+      backendGithubUrl: "https://github.com/sushantonit3652/server-cinema",
+      storeLabel: "GitHub Repository",
+      image: "assets/img/projects/cinema-plus.png",
+      secondaryImages: ["assets/img/projects/cinema-blackadam.png"],
+      shortDescription: "A full-stack movie discovery and cinema ticketing platform built with React / React Native and a dedicated Node.js + Express backend server.",
+      longOverview: "Cinema+ is a complete full-stack movie booking ecosystem featuring movie catalog exploration, detail screens, location-based theater selection, digital mobile ticket generation with QR, user profile management, and a dedicated Node.js/Express REST API server.",
+      techStack: ["React.js", "React Native", "Node.js", "Express.js", "REST APIs", "CORS", "Expo"],
+      contributions: [
+        "Built responsive mobile and web user interface with movie discovery grids, trailers, and showtime schedules.",
+        "Engineered the dedicated Node.js + Express backend server (server-cinema) serving movie APIs and booking states.",
+        "Implemented digital mobile ticket generation screen with dynamic QR code pass and theater info.",
+        "Designed clean REST endpoints handling CORS, showtime data, and user ticket reservations."
+      ],
+      caseStudyAvailable: true
+    },
+    {
+      id: "airopass",
+      number: "04",
       name: "Airopass — Travel, Visa & Flights",
       category: "Travel Technology & Tour Packages",
       filterCategory: "mobile travel",
@@ -119,7 +164,7 @@ const PORTFOLIO_CONFIG = {
     },
     {
       id: "securely-sync",
-      number: "03",
+      number: "05",
       name: "Securely Sync",
       category: "AI-Driven Workforce Management",
       filterCategory: "mobile enterprise",
@@ -140,7 +185,7 @@ const PORTFOLIO_CONFIG = {
     },
     {
       id: "biorich",
-      number: "04",
+      number: "06",
       name: "Biorich International",
       category: "Business Management & Sales",
       filterCategory: "mobile enterprise",
@@ -169,14 +214,14 @@ const PORTFOLIO_CONFIG = {
     },
     {
       num: "02",
-      title: "Android & iOS Cross-Platform",
-      description: "Unified codebases delivering authentic native look and feel on both Apple iOS and Google Android platforms without duplicated overhead.",
-      icon: "bi-apple"
+      title: "React.js Web & Full-Stack Development",
+      description: "Responsive web applications built with modern React.js, component design systems, and robust Node.js backend integration.",
+      icon: "bi-code-slash"
     },
     {
       num: "03",
-      title: "REST API Integration",
-      description: "Robust data communication layers, secure JWT/OAuth session handling, pagination, and real-time WebSocket / REST syncing.",
+      title: "REST API & Backend Engineering",
+      description: "Robust Node.js and Express backend services, tokenized authentication, secure session handling, and real-time syncing.",
       icon: "bi-arrow-left-right"
     },
     {
