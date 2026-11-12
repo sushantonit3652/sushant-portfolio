@@ -32,7 +32,7 @@ const PORTFOLIO_CONFIG = {
   },
 
   contact: {
-    email: "sushantthakur3211@gmail.com",
+    email: "sushantthakur.profile@gmail.com",
     phone: "+91 7807268475",
     location: "Dalhousie, Chamba, Himachal Pradesh, India",
     linkedIn: "https://www.linkedin.com/in/sushant-thakur-053261259/",

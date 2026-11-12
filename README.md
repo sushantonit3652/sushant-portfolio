@@ -46,6 +46,6 @@
 
 - **LinkedIn:** [linkedin.com/in/sushant-thakur-053261259](https://www.linkedin.com/in/sushant-thakur-053261259/)
 - **GitHub:** [github.com/sushantonit3652](https://github.com/sushantonit3652)
-- **Email:** [sushantthakur3211@gmail.com](mailto:sushantthakur3211@gmail.com)
+- **Email:** [sushantthakur.profile@gmail.com](mailto:sushantthakur.profile@gmail.com)
 - **Phone:** [+91 7807268475](tel:+917807268475)
 - **Location:** Dalhousie, Chamba, Himachal Pradesh, India

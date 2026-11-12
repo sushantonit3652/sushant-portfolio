@@ -242,22 +242,53 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      // Transparent feedback & open direct mailto compose
-      contactFeedback.className = "contact-feedback success";
+      // Target email address
+      const recipientEmail = (window.PORTFOLIO_CONFIG && window.PORTFOLIO_CONFIG.contact && window.PORTFOLIO_CONFIG.contact.email)
+        ? window.PORTFOLIO_CONFIG.contact.email
+        : "sushantthakur.profile@gmail.com";
+
+      contactFeedback.className = "contact-feedback info";
       contactFeedback.innerHTML = `
-        <div class="fw-bold mb-1"><i class="bi bi-check2-circle me-1"></i> Ready to send!</div>
-        <div>Launching your default email client for <strong>sushantthakur3211@gmail.com</strong> with your message pre-filled. You can also contact Sushant directly at <strong>+91 7807268475</strong> or on LinkedIn.</div>
+        <div><i class="bi bi-hourglass-split me-1"></i> Sending your message to <strong>${recipientEmail}</strong>...</div>
       `;
 
-      const mailtoUrl = `mailto:sushantthakur3211@gmail.com?subject=${encodeURIComponent(
-        subject || "Mobile Product Inquiry from Portfolio"
-      )}&body=${encodeURIComponent(
-        `Hi Sushant,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-      )}`;
-
-      setTimeout(() => {
-        window.location.href = mailtoUrl;
-      }, 700);
+      fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          _subject: subject || `New Portfolio Message from ${name}`,
+          message: message
+        })
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        contactFeedback.className = "contact-feedback success";
+        contactFeedback.innerHTML = `
+          <div class="fw-bold mb-1"><i class="bi bi-check2-circle me-1"></i> Message Delivered!</div>
+          <div>Your inquiry has been sent directly to <strong>${recipientEmail}</strong>. Sushant will reply to <strong>${email}</strong> as soon as possible.</div>
+        `;
+        contactForm.reset();
+      })
+      .catch((err) => {
+        contactFeedback.className = "contact-feedback success";
+        contactFeedback.innerHTML = `
+          <div class="fw-bold mb-1"><i class="bi bi-envelope-check me-1"></i> Opening Email Client...</div>
+          <div>Launching your default email client for <strong>${recipientEmail}</strong> with your pre-filled inquiry. You can also reach Sushant directly at <strong>+91 7807268475</strong>.</div>
+        `;
+        const mailtoUrl = `mailto:${recipientEmail}?subject=${encodeURIComponent(
+          subject || "Mobile Product Inquiry from Portfolio"
+        )}&body=${encodeURIComponent(
+          `Hi Sushant,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+        )}`;
+        setTimeout(() => {
+          window.location.href = mailtoUrl;
+        }, 700);
+      });
     });
   }
 
