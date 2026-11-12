@@ -75,7 +75,7 @@ const PORTFOLIO_CONFIG = {
       filterCategory: "mobile enterprise",
       liveUrl: "https://apps.apple.com/us/app/subsource-virtual-manager/id6499141041",
       storeLabel: "Apple App Store",
-      image: "assets/img/projects/subsource-clockin.png",
+      image: "assets/img/projects/subsource-startshift.png",
       secondaryImages: [
         "assets/img/projects/subsource-stopshift.png",
         "assets/img/projects/subsource-expense.png"
