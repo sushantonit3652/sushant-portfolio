@@ -189,10 +189,12 @@ document.addEventListener("DOMContentLoaded", function () {
           const storeActionContainer = document.getElementById("modalStoreAction");
           if (storeActionContainer) {
             if (projectData.liveUrl) {
-              const iconClass = projectData.liveUrl.includes("apple.com") ? "bi-apple" : "bi-google-play";
+              const iconClass = projectData.liveUrl.includes("apple.com")
+                ? "bi-apple"
+                : (projectData.liveUrl.includes("play.google") ? "bi-google-play" : "bi-globe");
               storeActionContainer.innerHTML = `
                 <a href="${projectData.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn-store d-inline-flex align-items-center">
-                  <i class="bi ${iconClass} fs-5 me-1"></i> Open on ${projectData.storeLabel} <i class="bi bi-box-arrow-up-right ms-2"></i>
+                  <i class="bi ${iconClass} fs-5 me-1"></i> Visit ${projectData.storeLabel || "Project"} <i class="bi bi-box-arrow-up-right ms-2"></i>
                 </a>
               `;
             } else {
