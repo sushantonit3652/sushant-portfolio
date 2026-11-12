@@ -170,7 +170,7 @@ const PORTFOLIO_CONFIG = {
       filterCategory: "mobile enterprise",
       liveUrl: "https://apps.apple.com/in/app/securely-sync/id6745403009",
       storeLabel: "Apple App Store",
-      image: "assets/img/projects/securely-sync-screen1.jpeg",
+      image: "assets/img/projects/securely-sync-screen.png",
       icon: "assets/img/projects/securely-sync-icon.png",
       shortDescription: "An AI-driven workforce management app on the Apple App Store featuring real-time employee management, task management, cloud synchronization, QR code scanning, and push notifications.",
       longOverview: "Securely Sync is a modern workforce management app live on the Apple App Store. It incorporates QR code scanning for fast asset and employee check-ins, real-time task dispatching, and bidirectional cloud-based synchronization.",

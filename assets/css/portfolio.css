@@ -134,6 +134,14 @@
   box-shadow: 0 20px 45px rgba(2, 132, 199, 0.12), 0 2px 8px rgba(15, 23, 42, 0.06);
 }
 
+[data-theme="light"] .mockup-card-phone {
+  background: #0F172A;
+  border-color: #334155;
+  box-shadow: 
+    0 20px 45px rgba(15, 23, 42, 0.16),
+    0 0 35px rgba(2, 132, 199, 0.14);
+}
+
 [data-theme="light"] .mobile-drawer {
   background: var(--bg-surface);
   border-left: 1px solid var(--border-subtle);
@@ -1388,6 +1396,15 @@ section {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.mockup-card-phone:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 
+    0 35px 65px rgba(0, 0, 0, 0.95),
+    0 0 50px rgba(0, 240, 255, 0.35);
 }
 
 .mockup-card-phone img {
@@ -2213,9 +2230,23 @@ section {
   }
 
   /* Smaller phone mockups for small screens */
+  .project-visual-pane {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+  .app-badge-verified {
+    top: 10px;
+    right: 10px;
+    font-size: 0.65rem;
+    padding: 0.25rem 0.65rem;
+  }
   .mockup-card-phone {
-    width: min(230px, 72vw);
-    height: 440px;
+    width: min(240px, 75vw);
+    height: 460px;
+    max-height: 65vh;
+    border-width: 5px;
+    border-radius: 30px;
+    margin: 0 auto;
   }
 
   .scroll-top-btn {
@@ -2237,9 +2268,16 @@ section {
   .project-name {
     font-size: 1.45rem;
   }
+  .project-visual-pane {
+    padding: 1.5rem 0.75rem;
+  }
   .mockup-card-phone {
-    width: 210px;
+    width: min(210px, 82vw);
     height: 400px;
+    max-height: 60vh;
+    border-width: 4px;
+    border-radius: 26px;
+    margin: 0 auto;
   }
   .project-content-pane {
     padding: 1.5rem 1rem;
