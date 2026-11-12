@@ -45,7 +45,7 @@
 
   <!-- Site Navigation Bar -->
   <nav class="site-navbar" id="navbar">
-    <div class="container d-flex align-items-center justify-content-between">
+    <div class="container-fluid px-3 px-sm-4 px-lg-5 d-flex align-items-center justify-content-between">
       
       <!-- Brand Geometric SVG Logo -->
       <a href="#hero" class="brand-wrapper">
@@ -54,7 +54,7 @@
           <span class="brand-name">SUSHANT <span>THAKUR</span></span>
           <span class="brand-role">React Native & Web Engineer</span>
         </div>
-        <span class="brand-status-pill d-none d-lg-inline-flex ms-2">
+        <span class="brand-status-pill d-none d-xxl-inline-flex ms-2">
           <span class="pulse-dot"></span> AVAILABLE FOR PROJECTS
         </span>
       </a>
@@ -72,22 +72,22 @@
       <!-- Right Nav Actions -->
       <div class="nav-actions">
         <!-- Theme Switcher -->
-        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
           <i class="bi bi-sun"></i>
         </button>
 
-        <!-- Direct Resume Download Button -->
-        <a href="assets/docs/Sushant_Thakur_Resume.pdf" download="Sushant_Thakur_Resume.pdf" class="btn-ghost d-none d-md-inline-flex">
+        <!-- Direct Resume Download Button (Visible on large screens) -->
+        <a href="assets/docs/Sushant_Thakur_Resume.pdf" download="Sushant_Thakur_Resume.pdf" class="btn-ghost d-none d-xl-inline-flex">
           <i class="bi bi-download"></i> Resume PDF
         </a>
 
-        <!-- Primary CTA -->
-        <a href="#contact" class="btn-prime d-none d-sm-inline-flex">
+        <!-- Primary CTA (Visible on tablet & desktop) -->
+        <a href="#contact" class="btn-prime d-none d-md-inline-flex">
           Let's Talk <i class="bi bi-arrow-up-right"></i>
         </a>
 
-        <!-- Mobile Menu Hamburger -->
-        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Open Mobile Menu">
+        <!-- Mobile Menu Hamburger Button -->
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu" title="Open Navigation Menu">
           <i class="bi bi-list"></i>
         </button>
       </div>
@@ -100,52 +100,103 @@
 
   <!-- Mobile Offcanvas Drawer -->
   <div class="mobile-drawer" id="mobileDrawer">
-    <div>
-      <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom" style="border-color: var(--border-subtle) !important;">
-        <div class="d-flex align-items-center gap-2">
-          <img src="assets/img/logo.svg" alt="ST Logo" style="width: 36px; height: 36px;">
-          <span class="brand-name">SUSHANT <span>THAKUR</span></span>
-        </div>
-        <div class="d-flex align-items-center gap-2">
-          <button class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
-            <i class="bi bi-sun"></i>
-          </button>
-          <button class="drawer-close-btn btn-ghost p-2" aria-label="Close menu">
-            <i class="bi bi-x-lg"></i>
-          </button>
+    
+    <!-- Drawer Header -->
+    <div class="drawer-header">
+      <div class="d-flex align-items-center gap-2">
+        <img src="assets/img/logo.svg" alt="ST Logo" style="width: 34px; height: 34px;">
+        <div class="d-flex flex-column">
+          <span class="brand-name" style="font-size: 1.05rem;">SUSHANT <span>THAKUR</span></span>
+          <span class="brand-role" style="font-size: 0.6rem;">Mobile & Web Engineer</span>
         </div>
       </div>
-
-      <div class="mb-4">
-        <span class="brand-status-pill">
-          <span class="pulse-dot"></span> AVAILABLE FOR PROJECTS
-        </span>
+      <div class="d-flex align-items-center gap-2">
+        <button class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="bi bi-sun"></i>
+        </button>
+        <button class="drawer-close-btn" aria-label="Close menu" title="Close Menu">
+          <i class="bi bi-x-lg"></i>
+        </button>
       </div>
+    </div>
 
-      <ul class="drawer-nav list-unstyled d-flex flex-direction-column gap-3 fs-5 fw-semibold">
-        <li><a href="#hero" class="d-block py-2">01. Home</a></li>
-        <li><a href="#about" class="d-block py-2">02. About</a></li>
-        <li><a href="#skills" class="d-block py-2">03. Technology Stack</a></li>
-        <li><a href="#projects" class="d-block py-2">04. Selected Projects</a></li>
-        <li><a href="#services" class="d-block py-2">05. Services</a></li>
-        <li><a href="#experience" class="d-block py-2">06. Experience</a></li>
-        <li><a href="#contact" class="d-block py-2">07. Contact</a></li>
+    <!-- Status Pill -->
+    <div class="drawer-status-wrap">
+      <span class="brand-status-pill">
+        <span class="pulse-dot"></span> AVAILABLE FOR PROJECTS
+      </span>
+    </div>
+
+    <!-- Scrollable Drawer Navigation -->
+    <div class="drawer-body">
+      <ul class="drawer-nav-list">
+        <li>
+          <a href="#hero" class="drawer-nav-item active">
+            <span class="drawer-nav-num">01</span>
+            <span class="drawer-nav-text">Home</span>
+            <i class="bi bi-chevron-right drawer-nav-arrow"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#about" class="drawer-nav-item">
+            <span class="drawer-nav-num">02</span>
+            <span class="drawer-nav-text">About Me</span>
+            <i class="bi bi-chevron-right drawer-nav-arrow"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#skills" class="drawer-nav-item">
+            <span class="drawer-nav-num">03</span>
+            <span class="drawer-nav-text">Technology Stack</span>
+            <i class="bi bi-chevron-right drawer-nav-arrow"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#projects" class="drawer-nav-item">
+            <span class="drawer-nav-num">04</span>
+            <span class="drawer-nav-text">Selected Projects</span>
+            <i class="bi bi-chevron-right drawer-nav-arrow"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#services" class="drawer-nav-item">
+            <span class="drawer-nav-num">05</span>
+            <span class="drawer-nav-text">Services & Capabilities</span>
+            <i class="bi bi-chevron-right drawer-nav-arrow"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#experience" class="drawer-nav-item">
+            <span class="drawer-nav-num">06</span>
+            <span class="drawer-nav-text">Work Experience</span>
+            <i class="bi bi-chevron-right drawer-nav-arrow"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="drawer-nav-item">
+            <span class="drawer-nav-num">07</span>
+            <span class="drawer-nav-text">Contact & Inquiry</span>
+            <i class="bi bi-chevron-right drawer-nav-arrow"></i>
+          </a>
+        </li>
       </ul>
     </div>
 
-    <div>
-      <a href="assets/docs/Sushant_Thakur_Resume.pdf" download="Sushant_Thakur_Resume.pdf" class="btn-ghost w-100 mb-3 justify-content-center">
+    <!-- Drawer Footer Actions -->
+    <div class="drawer-footer">
+      <a href="assets/docs/Sushant_Thakur_Resume.pdf" download="Sushant_Thakur_Resume.pdf" class="btn-ghost w-100 mb-2 justify-content-center">
         <i class="bi bi-download"></i> Download Resume PDF
       </a>
       <a href="#contact" class="btn-prime w-100 justify-content-center">
         Let's Connect <i class="bi bi-arrow-up-right"></i>
       </a>
-      <div class="d-flex justify-content-center gap-3 mt-4 text-muted">
-        <a href="https://github.com/sushantonit3652" target="_blank" rel="noopener noreferrer"><i class="bi bi-github fs-5 text-cyan"></i></a>
-        <a href="https://www.linkedin.com/in/sushant-thakur-053261259/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin fs-5 text-purple"></i></a>
-        <a href="mailto:sushantthakur3211@gmail.com"><i class="bi bi-envelope fs-5 text-cyan"></i></a>
+      <div class="drawer-socials">
+        <a href="https://github.com/sushantonit3652" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/sushant-thakur-053261259/" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:sushantthakur3211@gmail.com" class="footer-social-link" title="Email"><i class="bi bi-envelope"></i></a>
       </div>
     </div>
+
   </div>
 
   <!-- =========================================================================

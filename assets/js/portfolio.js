@@ -61,17 +61,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileDrawer = document.querySelector(".mobile-drawer");
   const drawerOverlay = document.querySelector(".drawer-overlay");
   const drawerClose = document.querySelector(".drawer-close-btn");
-  const drawerLinks = document.querySelectorAll(".drawer-nav a");
+  const drawerLinks = document.querySelectorAll(".drawer-nav-item, .drawer-nav a");
 
   function openDrawer() {
-    mobileDrawer.classList.add("open");
-    drawerOverlay.classList.add("active");
+    if (mobileDrawer) mobileDrawer.classList.add("open");
+    if (drawerOverlay) drawerOverlay.classList.add("active");
     document.body.style.overflow = "hidden";
   }
 
   function closeDrawer() {
-    mobileDrawer.classList.remove("open");
-    drawerOverlay.classList.remove("active");
+    if (mobileDrawer) mobileDrawer.classList.remove("open");
+    if (drawerOverlay) drawerOverlay.classList.remove("active");
     document.body.style.overflow = "";
   }
 
@@ -111,17 +111,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 5. Scroll Spy for Nav Links
   const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-links-desktop a, .drawer-nav a");
+  const desktopNavLinks = document.querySelectorAll(".nav-links-desktop a");
+  const drawerNavLinks = document.querySelectorAll(".drawer-nav-item");
 
   function scrollSpy() {
-    const scrollPos = window.scrollY + 200;
+    const scrollPos = window.scrollY + 160;
     sections.forEach((section) => {
       const top = section.offsetTop;
       const height = section.offsetHeight;
       const id = section.getAttribute("id");
 
       if (scrollPos >= top && scrollPos < top + height) {
-        navLinks.forEach((link) => {
+        desktopNavLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${id}`) {
+            link.classList.add("active");
+          }
+        });
+        drawerNavLinks.forEach((link) => {
           link.classList.remove("active");
           if (link.getAttribute("href") === `#${id}`) {
             link.classList.add("active");
