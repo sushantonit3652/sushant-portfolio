@@ -93,8 +93,29 @@ const PORTFOLIO_CONFIG = {
       caseStudyAvailable: true
     },
     {
-      id: "janta-diagnostic",
+      id: "securely-sync",
       number: "02",
+      name: "Securely Sync",
+      category: "AI-Driven Workforce Management",
+      filterCategory: "mobile enterprise",
+      liveUrl: "https://apps.apple.com/in/app/securely-sync/id6745403009",
+      storeLabel: "Apple App Store",
+      image: "assets/img/projects/securely-sync-screen.png",
+      icon: "assets/img/projects/securely-sync-icon.png",
+      shortDescription: "An AI-driven workforce management app on the Apple App Store featuring real-time employee management, task management, cloud synchronization, QR code scanning, and push notifications.",
+      longOverview: "Securely Sync is a modern workforce management app live on the Apple App Store. It incorporates QR code scanning for fast asset and employee check-ins, real-time task dispatching, and bidirectional cloud-based synchronization.",
+      techStack: ["React Native", "QR Code Scanner", "REST APIs", "Push Notifications", "Cloud Sync", "Optimized Modules"],
+      contributions: [
+        "Built real-time task management workflows and dynamic employee dispatching interfaces.",
+        "Integrated high-speed QR code camera scanner for instantaneous worker and checkpoint check-ins.",
+        "Boosted overall app performance and frame rates by optimizing React Native native bridge modules and REST caching.",
+        "Integrated multi-channel push notifications alerting field staff to priority task assignments."
+      ],
+      caseStudyAvailable: true
+    },
+    {
+      id: "janta-diagnostic",
+      number: "03",
       name: "Janta Diagnostic Centre & Blood Bank",
       category: "Healthcare Web Portal & Serverless API",
       filterCategory: "web",
@@ -116,7 +137,7 @@ const PORTFOLIO_CONFIG = {
     },
     {
       id: "cinema-plus",
-      number: "03",
+      number: "04",
       name: "Cinema+ — Movie Booking & Discovery Platform",
       category: "Full-Stack Web & Mobile &middot; React + Node.js Backend",
       filterCategory: "web mobile",
@@ -124,8 +145,8 @@ const PORTFOLIO_CONFIG = {
       githubUrl: "https://github.com/sushantonit3652/cinema",
       backendGithubUrl: "https://github.com/sushantonit3652/server-cinema",
       storeLabel: "GitHub Repository",
-      image: "assets/img/projects/cinema-plus.png",
-      secondaryImages: ["assets/img/projects/cinema-blackadam.png"],
+      image: "assets/img/projects/cinema-zootopia-device.png",
+      secondaryImages: ["assets/img/projects/cinema-zootopia-device.png"],
       shortDescription: "A full-stack movie discovery and cinema ticketing platform built with React / React Native and a dedicated Node.js + Express backend server.",
       longOverview: "Cinema+ is a complete full-stack movie booking ecosystem featuring movie catalog exploration, detail screens, location-based theater selection, digital mobile ticket generation with QR, user profile management, and a dedicated Node.js/Express REST API server.",
       techStack: ["React.js", "React Native", "Node.js", "Express.js", "REST APIs", "CORS", "Expo"],
@@ -139,17 +160,17 @@ const PORTFOLIO_CONFIG = {
     },
     {
       id: "airopass",
-      number: "04",
+      number: "05",
       name: "Airopass — Travel, Visa & Flights",
       category: "Travel Technology & Tour Packages",
       filterCategory: "mobile travel",
       liveUrl: "",
       storeLabel: "Mobile Application",
-      image: "assets/img/projects/airopass-visa.jpeg",
+      image: "assets/img/projects/airopass-app.jpeg",
       secondaryImages: [
         "assets/img/projects/airopass-flight.jpeg",
         "assets/img/projects/airopass-hotel.jpeg",
-        "assets/img/projects/airopass-app.jpeg"
+        "assets/img/projects/airopass-visa.jpeg"
       ],
       shortDescription: "A comprehensive travel application featuring digital visa consulting, worldwide hotel and flight bookings, tour packages, multi-currency wallet, and partner mode.",
       longOverview: "Airopass is a multi-vertical travel ecosystem engineered with React Native. It combines tourist visa application processing, live flight searches from DEL/BOM, verified hotel stays in popular destinations like Shimla, tour packages, and partner affiliation desks into a unified mobile interface.",
@@ -159,27 +180,6 @@ const PORTFOLIO_CONFIG = {
         "Built responsive flight booking module supporting One Way, Round Trip, and Multi-City cabin selections.",
         "Implemented verified hotel discovery engine with real-time room availability, date pickers, and destination lookups.",
         "Engineered the Partner Mode and dynamic in-app wallet allowing travel agents to process direct bookings."
-      ],
-      caseStudyAvailable: true
-    },
-    {
-      id: "securely-sync",
-      number: "05",
-      name: "Securely Sync",
-      category: "AI-Driven Workforce Management",
-      filterCategory: "mobile enterprise",
-      liveUrl: "https://apps.apple.com/in/app/securely-sync/id6745403009",
-      storeLabel: "Apple App Store",
-      image: "assets/img/projects/securely-sync-screen.png",
-      icon: "assets/img/projects/securely-sync-icon.png",
-      shortDescription: "An AI-driven workforce management app on the Apple App Store featuring real-time employee management, task management, cloud synchronization, QR code scanning, and push notifications.",
-      longOverview: "Securely Sync is a modern workforce management app live on the Apple App Store. It incorporates QR code scanning for fast asset and employee check-ins, real-time task dispatching, and bidirectional cloud-based synchronization.",
-      techStack: ["React Native", "QR Code Scanner", "REST APIs", "Push Notifications", "Cloud Sync", "Optimized Modules"],
-      contributions: [
-        "Built real-time task management workflows and dynamic employee dispatching interfaces.",
-        "Integrated high-speed QR code camera scanner for instantaneous worker and checkpoint check-ins.",
-        "Boosted overall app performance and frame rates by optimizing React Native native bridge modules and REST caching.",
-        "Integrated multi-channel push notifications alerting field staff to priority task assignments."
       ],
       caseStudyAvailable: true
     },

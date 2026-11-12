@@ -6,13 +6,22 @@
 document.addEventListener("DOMContentLoaded", function () {
   "use strict";
 
-  // 1. Navbar Scroll Effect
+  // 1. Navbar Scroll Effect & Reading Progress Bar
   const navbar = document.querySelector(".site-navbar");
+  const scrollProgressBar = document.getElementById("navScrollProgress");
+
   function handleNavScroll() {
-    if (window.scrollY > 40) {
+    const scrollY = window.scrollY || window.pageYOffset;
+    if (scrollY > 30) {
       navbar.classList.add("scrolled");
     } else {
       navbar.classList.remove("scrolled");
+    }
+
+    if (scrollProgressBar) {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+      scrollProgressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
     }
   }
   window.addEventListener("scroll", handleNavScroll, { passive: true });
@@ -215,22 +224,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 8. Contact Form Handling (Client-side validation, honest notification)
+  // 8. Contact Form Handling (Robust FormSubmit + Gmail Compose Fallback)
   const contactForm = document.getElementById("portfolioContactForm");
   const contactFeedback = document.getElementById("contactFeedback");
+  const contactSubmitBtn = document.getElementById("contactSubmitBtn");
+  const contactSubmitBtnText = document.getElementById("contactSubmitBtnText");
+  const contactSubmitBtnIcon = document.getElementById("contactSubmitBtnIcon");
 
   if (contactForm && contactFeedback) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const name = document.getElementById("contactName").value.trim();
-      const email = document.getElementById("contactEmail").value.trim();
-      const subject = document.getElementById("contactSubject").value.trim();
-      const message = document.getElementById("contactMessage").value.trim();
+      const nameInput = document.getElementById("contactName");
+      const emailInput = document.getElementById("contactEmail");
+      const subjectInput = document.getElementById("contactSubject");
+      const messageInput = document.getElementById("contactMessage");
+
+      const name = nameInput ? nameInput.value.trim() : "";
+      const email = emailInput ? emailInput.value.trim() : "";
+      const subject = subjectInput ? subjectInput.value.trim() : "";
+      const message = messageInput ? messageInput.value.trim() : "";
 
       if (!name || !email || !message) {
         contactFeedback.className = "contact-feedback error";
-        contactFeedback.textContent = "Please fill in all required fields (Name, Email, Message).";
+        contactFeedback.innerHTML = `<div><i class="bi bi-exclamation-triangle-fill me-1"></i> Please fill in all required fields (Name, Email, Message).</div>`;
         return;
       }
 
@@ -238,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
         contactFeedback.className = "contact-feedback error";
-        contactFeedback.textContent = "Please enter a valid email address.";
+        contactFeedback.innerHTML = `<div><i class="bi bi-exclamation-triangle-fill me-1"></i> Please enter a valid email address.</div>`;
         return;
       }
 
@@ -247,9 +264,58 @@ document.addEventListener("DOMContentLoaded", function () {
         ? window.PORTFOLIO_CONFIG.contact.email
         : "sushantthakur.profile@gmail.com";
 
+      const cleanSubject = subject || `New Portfolio Inquiry from ${name}`;
+      const emailBody = `Hi Sushant,\n\nName: ${name}\nEmail: ${email}\nSubject: ${cleanSubject}\n\nMessage:\n${message}\n\nSent from Portfolio Contact Form`;
+      const mailtoUrl = `mailto:${encodeURIComponent(recipientEmail)}?subject=${encodeURIComponent(cleanSubject)}&body=${encodeURIComponent(emailBody)}`;
+      const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(recipientEmail)}&su=${encodeURIComponent(cleanSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+      // Update hidden subject if present
+      const hiddenSubjectEl = document.getElementById("hiddenFormSubject");
+      if (hiddenSubjectEl) {
+        hiddenSubjectEl.value = cleanSubject;
+      }
+
+      // If browsing locally via file://, FormSubmit rejects due to missing Origin/Referer
+      if (window.location.protocol === "file:") {
+        contactFeedback.className = "contact-feedback warning";
+        contactFeedback.innerHTML = `
+          <div class="fw-bold mb-2 text-warning fs-6"><i class="bi bi-info-circle-fill me-1"></i> Direct Email Dispatch</div>
+          <div class="mb-3 text-contrast" style="font-size: 0.92rem; line-height: 1.5;">
+            Local file mode (<code>file:///</code>) detect hua hai. Message direct <strong>${recipientEmail}</strong> ko bhejne ke liye niche diye option par click karein:
+          </div>
+          <div class="d-flex flex-column flex-sm-row gap-2 mb-2">
+            <a href="${gmailWebUrl}" target="_blank" rel="noopener noreferrer" class="btn-prime justify-content-center flex-fill text-decoration-none">
+              <i class="bi bi-google me-1"></i> Send via Gmail Web <i class="bi bi-arrow-up-right ms-1"></i>
+            </a>
+            <a href="${mailtoUrl}" class="btn-secondary justify-content-center flex-fill text-decoration-none" style="padding: 0.65rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); display: inline-flex; align-items: center; justify-content: center; color: var(--text-contrast);">
+              <i class="bi bi-envelope me-1"></i> Open Mail App
+            </a>
+          </div>
+        `;
+        // Trigger mail client as fallback
+        setTimeout(() => {
+          window.location.href = mailtoUrl;
+        }, 1200);
+        return;
+      }
+
+      // UI Loading state
+      if (contactSubmitBtn) {
+        contactSubmitBtn.disabled = true;
+      }
+      if (contactSubmitBtnText) {
+        contactSubmitBtnText.textContent = "Sending Message...";
+      }
+      if (contactSubmitBtnIcon) {
+        contactSubmitBtnIcon.className = "spinner-border spinner-border-sm ms-2";
+      }
+
       contactFeedback.className = "contact-feedback info";
       contactFeedback.innerHTML = `
-        <div><i class="bi bi-hourglass-split me-1"></i> Sending your message to <strong>${recipientEmail}</strong>...</div>
+        <div class="d-flex align-items-center gap-2">
+          <div class="spinner-border spinner-border-sm" role="status"></div>
+          <span>Sending your message directly to <strong>${recipientEmail}</strong>...</span>
+        </div>
       `;
 
       fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
@@ -261,33 +327,78 @@ document.addEventListener("DOMContentLoaded", function () {
         body: JSON.stringify({
           name: name,
           email: email,
-          _subject: subject || `New Portfolio Message from ${name}`,
-          message: message
+          _subject: cleanSubject,
+          message: message,
+          _captcha: "false",
+          _template: "table"
         })
       })
-      .then((res) => res.json())
-      .then((data) => {
-        contactFeedback.className = "contact-feedback success";
-        contactFeedback.innerHTML = `
-          <div class="fw-bold mb-1"><i class="bi bi-check2-circle me-1"></i> Message Delivered!</div>
-          <div>Your inquiry has been sent directly to <strong>${recipientEmail}</strong>. Sushant will reply to <strong>${email}</strong> as soon as possible.</div>
-        `;
-        contactForm.reset();
+      .then(async (res) => {
+        let data = null;
+        try {
+          data = await res.json();
+        } catch (err) {
+          data = { success: res.ok ? "true" : "false" };
+        }
+
+        if (data && (data.success === "true" || data.success === true)) {
+          contactFeedback.className = "contact-feedback success";
+          contactFeedback.innerHTML = `
+            <div class="fw-bold mb-1 fs-6"><i class="bi bi-check2-circle me-1"></i> Message Delivered Successfully!</div>
+            <div class="text-contrast">Your inquiry has been sent directly to <strong>${recipientEmail}</strong>. Sushant will reply to <strong>${email}</strong> shortly.</div>
+          `;
+          contactForm.reset();
+        } else if (data && data.message && data.message.toLowerCase().includes("activation")) {
+          contactFeedback.className = "contact-feedback warning";
+          contactFeedback.innerHTML = `
+            <div class="fw-bold mb-2 text-warning fs-6"><i class="bi bi-exclamation-triangle-fill me-1"></i> One-Time Email Activation Required!</div>
+            <div class="mb-3 text-contrast" style="font-size: 0.92rem; line-height: 1.5;">
+              FormSubmit ne <strong>${recipientEmail}</strong> par ek confirmation link bheja hai.<br>
+              Apne Gmail inbox (ya Spam/Updates folder) me jakar <strong>"Activate Form"</strong> button par click karein.
+            </div>
+            <div class="d-flex flex-column flex-sm-row gap-2">
+              <a href="${gmailWebUrl}" target="_blank" rel="noopener noreferrer" class="btn-prime justify-content-center flex-fill text-decoration-none">
+                <i class="bi bi-google me-1"></i> Send Directly via Gmail <i class="bi bi-arrow-up-right ms-1"></i>
+              </a>
+              <a href="${mailtoUrl}" class="btn-secondary justify-content-center flex-fill text-decoration-none" style="padding: 0.65rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); display: inline-flex; align-items: center; justify-content: center; color: var(--text-contrast);">
+                <i class="bi bi-envelope me-1"></i> Open Mail App
+              </a>
+            </div>
+          `;
+        } else {
+          throw new Error((data && data.message) || "Unable to send message via form endpoint.");
+        }
       })
       .catch((err) => {
-        contactFeedback.className = "contact-feedback success";
+        contactFeedback.className = "contact-feedback warning";
         contactFeedback.innerHTML = `
-          <div class="fw-bold mb-1"><i class="bi bi-envelope-check me-1"></i> Opening Email Client...</div>
-          <div>Launching your default email client for <strong>${recipientEmail}</strong> with your pre-filled inquiry. You can also reach Sushant directly at <strong>+91 7807268475</strong>.</div>
+          <div class="fw-bold mb-2 text-warning fs-6"><i class="bi bi-envelope-check-fill me-1"></i> Direct Send Options</div>
+          <div class="mb-3 text-contrast" style="font-size: 0.92rem; line-height: 1.5;">
+            Automatic server delivery me dikkat aayi. Aap direct Gmail ya default Mail App se 1-click me message bhej sakte hain:
+          </div>
+          <div class="d-flex flex-column flex-sm-row gap-2">
+            <a href="${gmailWebUrl}" target="_blank" rel="noopener noreferrer" class="btn-prime justify-content-center flex-fill text-decoration-none">
+              <i class="bi bi-google me-1"></i> Send via Gmail Web <i class="bi bi-arrow-up-right ms-1"></i>
+            </a>
+            <a href="${mailtoUrl}" class="btn-secondary justify-content-center flex-fill text-decoration-none" style="padding: 0.65rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); display: inline-flex; align-items: center; justify-content: center; color: var(--text-contrast);">
+              <i class="bi bi-envelope me-1"></i> Open Mail App
+            </a>
+          </div>
         `;
-        const mailtoUrl = `mailto:${recipientEmail}?subject=${encodeURIComponent(
-          subject || "Mobile Product Inquiry from Portfolio"
-        )}&body=${encodeURIComponent(
-          `Hi Sushant,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-        )}`;
         setTimeout(() => {
           window.location.href = mailtoUrl;
-        }, 700);
+        }, 1200);
+      })
+      .finally(() => {
+        if (contactSubmitBtn) {
+          contactSubmitBtn.disabled = false;
+        }
+        if (contactSubmitBtnText) {
+          contactSubmitBtnText.textContent = "Send Message";
+        }
+        if (contactSubmitBtnIcon) {
+          contactSubmitBtnIcon.className = "bi bi-send-fill ms-1";
+        }
       });
     });
   }

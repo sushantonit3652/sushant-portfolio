@@ -374,18 +374,76 @@ a {
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 1.25rem 0;
+  padding: 1.15rem 0;
   background: transparent;
-  transition: var(--transition-smooth);
+  transition: padding 0.35s cubic-bezier(0.16, 1, 0.3, 1), background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
 .site-navbar.scrolled {
-  background: var(--bg-glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 0.8rem 0;
-  border-bottom: 1px solid var(--border-subtle);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  background: rgba(6, 8, 20, 0.84);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.16);
+  box-shadow: 
+    0 12px 35px -8px rgba(0, 0, 0, 0.75),
+    0 0 25px rgba(0, 240, 255, 0.06);
+}
+
+[data-theme="light"] .site-navbar.scrolled {
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid rgba(2, 132, 199, 0.18);
+  box-shadow: 
+    0 10px 30px -8px rgba(15, 23, 42, 0.08),
+    0 0 25px rgba(2, 132, 199, 0.05);
+}
+
+/* Scrolled Micro Transitions for Brand */
+.site-navbar.scrolled .brand-logo-img {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.5));
+}
+
+.site-navbar.scrolled .brand-name {
+  font-size: 1.12rem;
+}
+
+.site-navbar.scrolled .brand-role {
+  font-size: 0.62rem;
+}
+
+.site-navbar.scrolled .nav-links-desktop {
+  padding: 0.32rem 1.15rem;
+  background: rgba(15, 23, 42, 0.88);
+  border-color: rgba(0, 240, 255, 0.28);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 240, 255, 0.12);
+}
+
+[data-theme="light"] .site-navbar.scrolled .nav-links-desktop {
+  background: rgba(248, 250, 252, 0.95);
+  border-color: rgba(2, 132, 199, 0.28);
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06), 0 0 15px rgba(2, 132, 199, 0.08);
+}
+
+.site-navbar.scrolled .btn-prime {
+  padding: 0.48rem 1.1rem;
+  font-size: 0.82rem;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.25);
+}
+
+/* Micro Scroll Reading Progress Bar at Bottom of Navbar */
+.nav-scroll-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--gradient-cyber);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.8), 0 0 4px #EC4899;
+  transition: width 0.08s ease-out;
+  z-index: 1001;
+  pointer-events: none;
 }
 
 .brand-wrapper {
@@ -1034,32 +1092,68 @@ section {
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.96rem;
+}
+
+.about-section p strong {
+  color: var(--text-contrast);
+  font-weight: 600;
 }
 
 .editorial-quote {
   font-family: var(--font-heading);
-  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-size: clamp(1.15rem, 2.2vw, 1.65rem);
   font-weight: 600;
   color: var(--text-primary);
-  line-height: 1.4;
+  line-height: 1.45;
   border-left: 3px solid var(--accent-cyan);
-  padding-left: 1.5rem;
-  margin-bottom: 2rem;
+  padding: 0.6rem 1rem 0.6rem 1.25rem;
+  margin-bottom: 1.6rem;
+  background: linear-gradient(90deg, rgba(0, 240, 255, 0.05) 0%, transparent 100%);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 
 .stats-grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-  margin-top: 2.5rem;
+  gap: 1.15rem;
+  margin-top: 2rem;
 }
 
 .stat-box {
   background: var(--gradient-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
-  padding: 1.6rem;
+  padding: 1.35rem 1.25rem;
   transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient-cyber);
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+
+.stat-box:hover::before {
+  opacity: 1;
 }
 
 .stat-box:hover {
@@ -1070,34 +1164,36 @@ section {
 
 .stat-number {
   font-family: var(--font-heading);
-  font-size: 2.6rem;
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
   font-weight: 800;
   background: var(--gradient-cyber);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.04em;
   line-height: 1;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
 }
 
 .stat-label {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
+  line-height: 1.25;
 }
 
 .stat-sub {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
+  line-height: 1.3;
 }
 
 .arch-card {
   background: var(--gradient-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
-  padding: 1.6rem;
-  margin-bottom: 1.25rem;
+  padding: 1.4rem 1.5rem;
+  margin-bottom: 1.1rem;
   transition: var(--transition-smooth);
 }
 
@@ -1107,9 +1203,38 @@ section {
   transform: translateY(-2px);
 }
 
+.arch-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.arch-card-title {
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--text-contrast);
+  margin-bottom: 0.1rem;
+}
+
+.arch-card-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+}
+
+.arch-card-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
 .arch-icon-wrapper {
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   background: var(--accent-cyan-dim);
   border: 1px solid var(--border-accent);
   border-radius: var(--radius-sm);
@@ -1117,8 +1242,94 @@ section {
   align-items: center;
   justify-content: center;
   color: var(--accent-cyan);
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Verified Quick Coordinates Card in Section 01 */
+.about-coords-card {
+  background: var(--bg-surface);
+  border: 1px dashed var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem;
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  transition: var(--transition-smooth);
+}
+
+.about-coords-card:hover {
+  border-color: var(--border-accent);
+  background: var(--bg-surface-elevated);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.coord-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.coord-item:not(:last-child) {
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="light"] .coord-item:not(:last-child) {
+  border-bottom-color: rgba(148, 163, 184, 0.2);
+}
+
+.coord-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.coord-item:nth-child(2) .coord-icon-box {
+  background: rgba(168, 85, 247, 0.08);
+}
+
+.coord-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.coord-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.coord-value {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-contrast);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.coord-link {
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.coord-link:hover {
+  color: var(--accent-cyan);
+  text-decoration: underline;
 }
 
 /* ==========================================================================
@@ -1525,6 +1736,49 @@ section {
   color: #334155;
 }
 
+/* Specialized Phone Frame for Airopass to ensure 100% full bottom navigation visibility */
+.mockup-card-phone.mockup-phone-airopass {
+  width: 270px;
+  height: 584px;
+  background: #FFFFFF;
+}
+
+.mockup-card-phone.mockup-phone-airopass img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  background: #FFFFFF;
+  display: block;
+}
+
+/* Specialized Phone Frame for Cinema+ Movie Ticketing App */
+.mockup-card-phone.mockup-phone-cinema {
+  width: 270px;
+  height: 552px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 46px;
+  overflow: visible;
+  filter: drop-shadow(0 25px 45px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 35px rgba(168, 85, 247, 0.35));
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.mockup-card-phone.mockup-phone-cinema:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: none;
+  filter: drop-shadow(0 35px 60px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 50px rgba(168, 85, 247, 0.55));
+}
+
+.mockup-card-phone.mockup-phone-cinema img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
 .app-badge-verified {
   position: absolute;
   top: 15px;
@@ -1745,6 +1999,20 @@ section {
   background: rgba(0, 240, 255, 0.12);
   border: 1px solid var(--accent-cyan);
   color: var(--accent-cyan);
+}
+
+.contact-feedback.info {
+  display: block;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid var(--accent-purple);
+  color: var(--text-contrast);
+}
+
+.contact-feedback.warning {
+  display: block;
+  background: rgba(234, 179, 8, 0.14);
+  border: 1px solid rgba(234, 179, 8, 0.6);
+  color: #fef08a;
 }
 
 .contact-feedback.error {
@@ -2193,6 +2461,16 @@ section {
     border-width: 6px;
     border-radius: 34px;
   }
+  .mockup-card-phone.mockup-phone-airopass {
+    width: min(250px, 75vw);
+    height: 540px;
+    max-height: 72vh;
+  }
+  .mockup-card-phone.mockup-phone-cinema {
+    width: min(250px, 75vw);
+    height: 512px;
+    max-height: 72vh;
+  }
 
   /* Services */
   .service-card {
@@ -2306,10 +2584,77 @@ section {
     justify-content: center;
   }
 
-  /* 1-Column Stats on narrow screens */
+  /* Section 01: Philosophy & Background Compact Mobile */
+  .editorial-quote {
+    font-size: 1.15rem;
+    padding: 0.5rem 0.85rem 0.5rem 1rem;
+    margin-bottom: 1.25rem;
+  }
   .stats-grid-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+    margin-top: 1.35rem;
+  }
+  .stat-box {
+    padding: 0.95rem 0.85rem;
+    border-radius: var(--radius-sm);
+  }
+  .stat-number {
+    font-size: 1.85rem;
+    margin-bottom: 0.2rem;
+  }
+  .stat-label {
+    font-size: 0.82rem;
+    line-height: 1.2;
+  }
+  .stat-sub {
+    font-size: 0.7rem;
+    line-height: 1.25;
+  }
+  .arch-card {
+    padding: 1.15rem 1rem;
+    margin-bottom: 0.85rem;
+  }
+  .arch-card-header {
     gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .arch-card-title {
+    font-size: 1.02rem;
+  }
+  .arch-card-tag {
+    font-size: 0.65rem;
+  }
+  .arch-card-desc {
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+  .arch-icon-wrapper {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+  .about-coords-card {
+    padding: 1rem 1.15rem;
+    margin-top: 1rem;
+    gap: 0.75rem;
+  }
+  .coord-item {
+    gap: 0.85rem;
+  }
+  .coord-item:not(:last-child) {
+    padding-bottom: 0.75rem;
+  }
+  .coord-icon-box {
+    width: 34px;
+    height: 34px;
+    font-size: 0.95rem;
+  }
+  .coord-label {
+    font-size: 0.68rem;
+  }
+  .coord-value {
+    font-size: 0.86rem;
   }
 
   /* Filter buttons */
@@ -2358,6 +2703,16 @@ section {
     border-radius: 30px;
     margin: 0 auto;
   }
+  .mockup-card-phone.mockup-phone-airopass {
+    width: min(230px, 72vw);
+    height: 497px;
+    max-height: 68vh;
+  }
+  .mockup-card-phone.mockup-phone-cinema {
+    width: min(230px, 72vw);
+    height: 471px;
+    max-height: 68vh;
+  }
 
   .scroll-top-btn {
     bottom: 15px;
@@ -2378,6 +2733,25 @@ section {
   .project-name {
     font-size: 1.45rem;
   }
+  .editorial-quote {
+    font-size: 1.05rem;
+    padding-left: 0.75rem;
+  }
+  .stats-grid-container {
+    gap: 0.5rem;
+  }
+  .stat-box {
+    padding: 0.75rem 0.6rem;
+  }
+  .stat-number {
+    font-size: 1.55rem;
+  }
+  .stat-label {
+    font-size: 0.75rem;
+  }
+  .stat-sub {
+    font-size: 0.65rem;
+  }
   .project-visual-pane {
     padding: 1.5rem 0.75rem;
   }
@@ -2388,6 +2762,16 @@ section {
     border-width: 4px;
     border-radius: 26px;
     margin: 0 auto;
+  }
+  .mockup-card-phone.mockup-phone-airopass {
+    width: min(200px, 80vw);
+    height: 432px;
+    max-height: 65vh;
+  }
+  .mockup-card-phone.mockup-phone-cinema {
+    width: min(200px, 80vw);
+    height: 410px;
+    max-height: 62vh;
   }
   .project-content-pane {
     padding: 1.5rem 1rem;

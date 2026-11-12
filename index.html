@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Sushant Thakur — React Native & Full-Stack Engineer | Digital Products</title>
-  
+
   <meta name="description"
     content="Sushant Thakur is a React Native & Full-Stack Developer building high-performance mobile apps and web platforms with React.js, Node.js, and Expo. Live apps on Apple App Store, Google Play, and custom domains.">
   <meta name="keywords"
@@ -46,7 +46,7 @@
   <!-- Site Navigation Bar -->
   <nav class="site-navbar" id="navbar">
     <div class="container-fluid px-3 px-sm-4 px-lg-5 d-flex align-items-center justify-content-between">
-      
+
       <!-- Brand Geometric SVG Logo -->
       <a href="#hero" class="brand-wrapper">
         <img src="assets/img/logo.svg" alt="Sushant Thakur Logo" class="brand-logo-img">
@@ -76,10 +76,6 @@
           <i class="bi bi-sun"></i>
         </button>
 
-        <!-- Direct Resume Download Button (Visible on large screens) -->
-        <a href="assets/docs/Sushant_Thakur_Resume.pdf" download="Sushant_Thakur_Resume.pdf" class="btn-ghost d-none d-xl-inline-flex">
-          <i class="bi bi-download"></i> Resume PDF
-        </a>
 
         <!-- Primary CTA (Visible on tablet & desktop) -->
         <a href="#contact" class="btn-prime d-none d-md-inline-flex">
@@ -87,12 +83,14 @@
         </a>
 
         <!-- Mobile Menu Hamburger Button -->
-        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu" title="Open Navigation Menu">
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu"
+          title="Open Navigation Menu">
           <i class="bi bi-list"></i>
         </button>
       </div>
 
-    </div>
+      <!-- Micro Scroll Progress Indicator -->
+      <div class="nav-scroll-progress" id="navScrollProgress"></div>
   </nav>
 
   <!-- Mobile Drawer Overlay -->
@@ -100,7 +98,7 @@
 
   <!-- Mobile Offcanvas Drawer -->
   <div class="mobile-drawer" id="mobileDrawer">
-    
+
     <!-- Drawer Header -->
     <div class="drawer-header">
       <div class="d-flex align-items-center gap-2">
@@ -184,16 +182,16 @@
 
     <!-- Drawer Footer Actions -->
     <div class="drawer-footer">
-      <a href="assets/docs/Sushant_Thakur_Resume.pdf" download="Sushant_Thakur_Resume.pdf" class="btn-ghost w-100 mb-2 justify-content-center">
-        <i class="bi bi-download"></i> Download Resume PDF
-      </a>
       <a href="#contact" class="btn-prime w-100 justify-content-center">
         Let's Connect <i class="bi bi-arrow-up-right"></i>
       </a>
       <div class="drawer-socials">
-        <a href="https://github.com/sushantonit3652" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="GitHub"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/sushant-thakur-053261259/" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="mailto:sushantthakur.profile@gmail.com" class="footer-social-link" title="Email"><i class="bi bi-envelope"></i></a>
+        <a href="https://github.com/sushantonit3652" target="_blank" rel="noopener noreferrer"
+          class="footer-social-link" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/sushant-thakur-053261259/" target="_blank" rel="noopener noreferrer"
+          class="footer-social-link" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:sushantthakur.profile@gmail.com" class="footer-social-link" title="Email"><i
+            class="bi bi-envelope"></i></a>
       </div>
     </div>
 
@@ -205,13 +203,15 @@
   <section class="hero-section" id="hero">
     <div class="container">
       <div class="row align-items-center g-5">
-        
+
         <!-- Left Column -->
         <div class="col-lg-7" data-aos="fade-up">
-          
+
           <div class="hero-editorial-badge">
             <span class="pulse-dot"></span>
-            <span class="font-mono text-cyan" style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;">AVAILABLE FOR MOBILE & WEB PROJECTS</span>
+            <span class="font-mono text-cyan"
+              style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;">AVAILABLE FOR MOBILE & WEB
+              PROJECTS</span>
           </div>
 
           <h1 class="hero-headline">
@@ -219,7 +219,8 @@
           </h1>
 
           <p class="hero-subtitle">
-            I'm Sushant Thakur, a React Native & Full-Stack Web Developer building production Android and iOS mobile applications alongside robust React.js web apps and Node.js REST API backends.
+            I'm Sushant Thakur, a React Native & Full-Stack Web Developer building production Android and iOS mobile
+            applications alongside robust React.js web apps and Node.js REST API backends.
           </p>
 
           <div class="hero-cta-group">
@@ -228,9 +229,6 @@
             </a>
             <a href="#contact" class="btn-ghost">
               LET'S CONNECT <i class="bi bi-chat-text"></i>
-            </a>
-            <a href="assets/docs/Sushant_Thakur_Resume.pdf" download="Sushant_Thakur_Resume.pdf" class="btn-ghost">
-              <i class="bi bi-download"></i> RESUME PDF
             </a>
           </div>
 
@@ -249,9 +247,10 @@
         <!-- Right Column: SubSource Real Clock-In Screen Mockup -->
         <div class="col-lg-5" data-aos="fade-left" data-aos-delay="150">
           <div class="hero-device-stage">
-            
+
             <div class="phone-mockup-frame">
-              <img src="assets/img/projects/subsource-startshift.png" alt="SubSource Start Shift Clock-In App Screen" class="phone-screen-img">
+              <img src="assets/img/projects/subsource-startshift.png" alt="SubSource Start Shift Clock-In App Screen"
+                class="phone-screen-img">
             </div>
 
             <!-- Floating Code Snippet Card -->
@@ -261,7 +260,8 @@
               </div>
               <div class="text-muted-custom">// Full-Stack Mobile & Web Runtime</div>
               <div><span class="text-cyan">const</span> Platform = () =&gt; {</div>
-              <div class="ps-2"><span class="text-muted-custom">&lt;</span><span class="text-contrast">UnifiedStack</span></div>
+              <div class="ps-2"><span class="text-muted-custom">&lt;</span><span
+                  class="text-contrast">UnifiedStack</span></div>
               <div class="ps-4"><span class="text-purple">mobile</span>="React Native"</div>
               <div class="ps-4"><span class="text-cyan">web</span>="React.js"</div>
               <div class="ps-4"><span class="text-purple">backend</span>="Node.js & Express"</div>
@@ -292,30 +292,36 @@
        ========================================================================= -->
   <section class="about-section" id="about">
     <div class="container">
-      
-      <div class="row g-5">
-        
+
+      <div class="row g-4 g-lg-5 align-items-start">
+
         <!-- Left Side: Editorial Manifesto & Personal Brand -->
         <div class="col-lg-6" data-aos="fade-up">
           <span class="section-label">01 — PHILOSOPHY & BACKGROUND</span>
           <h2 class="section-title">Not Just Code. I Build Products.</h2>
-          
+
           <div class="editorial-quote">
-            "Engineering mobile applications and web platforms isn't just about rendering UI screens — it is about orchestrating intuitive, resilient digital tools that solve actual business challenges."
+            "Engineering mobile applications and web platforms isn't just about rendering UI screens — it is about
+            orchestrating intuitive, resilient digital tools that solve actual business challenges."
           </div>
 
           <p class="mb-3">
-            I am a React Native & Full-Stack Web Developer with <strong>more than 2+ years of verified software development experience</strong> building high-performing cross-platform mobile applications (Android/iOS) and responsive web applications with React.js and Node.js backends.
+            I am a React Native & Full-Stack Web Developer with <strong>more than 2.9+ years of verified software
+              development experience</strong> building high-performing cross-platform mobile applications (Android/iOS)
+            and responsive web applications with React.js and Node.js backends.
           </p>
 
           <p class="mb-4">
-            My experience spans building scalable apps published on the <strong>Apple App Store</strong> (SubSource, Securely Sync), <strong>Google Play Store</strong> (Biorich International), full-stack cinema ticket booking (Cinema+ with Node.js/Express server), and high-traffic healthcare portals (Janta Diagnostic Centre with Vercel serverless functions).
+            My experience spans building scalable apps published on the <strong>Apple App Store</strong> (SubSource,
+            Securely Sync), <strong>Google Play Store</strong> (Biorich International), full-stack cinema ticket booking
+            (Cinema+ with Node.js/Express server), and high-traffic healthcare portals (Janta Diagnostic Centre with
+            Vercel serverless functions).
           </p>
 
           <!-- 4 Verified Metrics Grid -->
           <div class="stats-grid-container">
             <div class="stat-box">
-              <div class="stat-number">2+</div>
+              <div class="stat-number">2.9+</div>
               <div class="stat-label">Years Experience</div>
               <div class="stat-sub">Mobile & Full-Stack</div>
             </div>
@@ -343,50 +349,86 @@
 
         <!-- Right Side: Architectural Pillars & Verified Credentials -->
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
-          
+
           <div class="arch-card">
-            <div class="arch-icon-wrapper">
-              <i class="bi bi-phone"></i>
+            <div class="arch-card-header">
+              <div class="arch-icon-wrapper">
+                <i class="bi bi-phone"></i>
+              </div>
+              <div>
+                <h4 class="arch-card-title">Cross-Platform React Native</h4>
+                <span class="arch-card-tag">iOS & Android Telemetry</span>
+              </div>
             </div>
-            <h4>Cross-Platform React Native</h4>
-            <p class="mb-0">
-              High-accuracy background GPS telemetry, geofenced shift management, offline data caching, and native bridge optimizations for iOS and Android.
+            <p class="arch-card-desc mb-0">
+              High-accuracy background GPS telemetry, geofenced shift management, offline data caching, and native
+              bridge optimizations for iOS and Android.
             </p>
           </div>
 
           <div class="arch-card">
-            <div class="arch-icon-wrapper" style="background: var(--accent-purple-dim); border-color: var(--border-purple); color: var(--accent-purple);">
-              <i class="bi bi-code-slash"></i>
+            <div class="arch-card-header">
+              <div class="arch-icon-wrapper"
+                style="background: var(--accent-purple-dim); border-color: var(--border-purple); color: var(--accent-purple);">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <div>
+                <h4 class="arch-card-title">React.js Web & Node.js Backend</h4>
+                <span class="arch-card-tag" style="color: var(--accent-purple);">Microservices & SSR</span>
+              </div>
             </div>
-            <h4>React.js Web & Node.js Backend</h4>
-            <p class="mb-0">
-              Modern frontend web development with React.js, responsive component architecture, and scalable Node.js/Express REST API microservices.
+            <p class="arch-card-desc mb-0">
+              Modern frontend web development with React.js, responsive component architecture, and scalable
+              Node.js/Express REST API microservices.
             </p>
           </div>
 
           <div class="arch-card">
-            <div class="arch-icon-wrapper">
-              <i class="bi bi-cloud-check"></i>
+            <div class="arch-card-header">
+              <div class="arch-icon-wrapper">
+                <i class="bi bi-cloud-check"></i>
+              </div>
+              <div>
+                <h4 class="arch-card-title">Serverless APIs & Cloud Deployments</h4>
+                <span class="arch-card-tag">App Store, Play & Vercel</span>
+              </div>
             </div>
-            <h4>Serverless APIs & Cloud Deployments</h4>
-            <p class="mb-0">
-              Production deployments on Apple App Store, Google Play Store, Vercel Serverless Functions, and Cloud Firestore real-time synchronization.
+            <p class="arch-card-desc mb-0">
+              Production deployments on Apple App Store, Google Play Store, Vercel Serverless Functions, and Cloud
+              Firestore real-time synchronization.
             </p>
           </div>
 
-          <!-- Verified CV Coordinates -->
-          <div class="p-3 rounded mt-3" style="background: var(--bg-surface); border: 1px dashed var(--border-subtle);">
-            <div class="d-flex justify-content-between align-items-center mb-1">
-              <span class="font-mono text-cyan small">LOCATION</span>
-              <span class="text-contrast small fw-semibold">Dalhousie, Chamba, Himachal Pradesh, India</span>
+          <!-- Verified Quick Coordinates Card -->
+          <div class="about-coords-card">
+            <div class="coord-item">
+              <div class="coord-icon-box">
+                <i class="bi bi-geo-alt-fill text-cyan"></i>
+              </div>
+              <div class="coord-content">
+                <div class="coord-label text-cyan">LOCATION / ADDRESS</div>
+                <div class="coord-value">Dalhousie, Chamba, Himachal Pradesh, India</div>
+              </div>
             </div>
-            <div class="d-flex justify-content-between align-items-center mb-1">
-              <span class="font-mono text-purple small">PHONE</span>
-              <span class="text-contrast small fw-semibold">+91 7807268475</span>
+
+            <div class="coord-item">
+              <div class="coord-icon-box">
+                <i class="bi bi-telephone-fill text-purple"></i>
+              </div>
+              <div class="coord-content">
+                <div class="coord-label text-purple">PHONE / WHATSAPP</div>
+                <a href="tel:+917807268475" class="coord-value coord-link text-contrast">+91 7807268475</a>
+              </div>
             </div>
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="font-mono text-cyan small">EMAIL</span>
-              <span class="text-contrast small fw-semibold">sushantthakur.profile@gmail.com</span>
+
+            <div class="coord-item">
+              <div class="coord-icon-box">
+                <i class="bi bi-envelope-fill text-cyan"></i>
+              </div>
+              <div class="coord-content">
+                <div class="coord-label text-cyan">DIRECT EMAIL</div>
+                <a href="mailto:sushantthakur.profile@gmail.com" class="coord-value coord-link text-contrast">sushantthakur.profile@gmail.com</a>
+              </div>
             </div>
           </div>
 
@@ -402,17 +444,18 @@
        ========================================================================= -->
   <section class="skills-section" id="skills">
     <div class="container">
-      
+
       <div class="text-center mb-5" data-aos="fade-up">
         <span class="section-label">02 — TECHNICAL EXPERTISE</span>
         <h2 class="section-title">My Technology Stack</h2>
         <p class="section-desc mx-auto">
-          Disciplined toolset verified across production mobile apps, React web applications, and Node.js backend services.
+          Disciplined toolset verified across production mobile apps, React web applications, and Node.js backend
+          services.
         </p>
       </div>
 
       <div class="row g-4">
-        
+
         <!-- Group 1: Mobile & Frontend -->
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="skills-category-card">
@@ -487,7 +530,8 @@
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
           <div class="skills-category-card">
             <div class="category-header">
-              <div class="category-icon" style="background: var(--accent-purple-dim); color: var(--accent-purple);"><i class="bi bi-hdd-network"></i></div>
+              <div class="category-icon" style="background: var(--accent-purple-dim); color: var(--accent-purple);"><i
+                  class="bi bi-hdd-network"></i></div>
               <div>
                 <h4 class="mb-0 fs-5">Backend & Cloud APIs</h4>
                 <span class="font-mono text-purple small">SERVICES & ARCHITECTURE</span>
@@ -503,7 +547,8 @@
                     <div class="text-muted-custom small">REST API Servers & CORS</div>
                   </div>
                 </div>
-                <span class="skill-badge" style="background: var(--accent-purple-dim); color: var(--accent-purple); border-color: var(--border-purple);">Backend</span>
+                <span class="skill-badge"
+                  style="background: var(--accent-purple-dim); color: var(--accent-purple); border-color: var(--border-purple);">Backend</span>
               </div>
 
               <div class="skill-row-item">
@@ -514,7 +559,8 @@
                     <div class="text-muted-custom small">Real-time NoSQL & Auth</div>
                   </div>
                 </div>
-                <span class="skill-badge" style="background: var(--accent-purple-dim); color: var(--accent-purple); border-color: var(--border-purple);">Production</span>
+                <span class="skill-badge"
+                  style="background: var(--accent-purple-dim); color: var(--accent-purple); border-color: var(--border-purple);">Production</span>
               </div>
 
               <div class="skill-row-item">
@@ -525,7 +571,8 @@
                     <div class="text-muted-custom small">GPS Tracking & Geofencing</div>
                   </div>
                 </div>
-                <span class="skill-badge" style="background: var(--accent-purple-dim); color: var(--accent-purple); border-color: var(--border-purple);">Expertise</span>
+                <span class="skill-badge"
+                  style="background: var(--accent-purple-dim); color: var(--accent-purple); border-color: var(--border-purple);">Expertise</span>
               </div>
 
               <div class="skill-row-item">
@@ -536,7 +583,8 @@
                     <div class="text-muted-custom small">Cloud Functions & APIs</div>
                   </div>
                 </div>
-                <span class="skill-badge" style="background: var(--accent-purple-dim); color: var(--accent-purple); border-color: var(--border-purple);">Serverless</span>
+                <span class="skill-badge"
+                  style="background: var(--accent-purple-dim); color: var(--accent-purple); border-color: var(--border-purple);">Serverless</span>
               </div>
 
               <div class="skill-row-item">
@@ -547,7 +595,8 @@
                     <div class="text-muted-custom small">FCM & Apple Push Services</div>
                   </div>
                 </div>
-                <span class="skill-badge" style="background: var(--accent-purple-dim); color: var(--accent-purple); border-color: var(--border-purple);">Production</span>
+                <span class="skill-badge"
+                  style="background: var(--accent-purple-dim); color: var(--accent-purple); border-color: var(--border-purple);">Production</span>
               </div>
             </div>
           </div>
@@ -633,7 +682,7 @@
        ========================================================================= -->
   <section class="projects-section" id="projects">
     <div class="container">
-      
+
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5" data-aos="fade-up">
         <div>
           <span class="section-label">03 — SELECTED WORK</span>
@@ -655,23 +704,30 @@
       <!-- PROJECT 01: SUBSOURCE VIRTUAL MANAGER -->
       <div class="project-card-editorial" data-category="mobile enterprise" data-aos="fade-up">
         <div class="row g-0 flex-lg-row-reverse">
-          
+
           <div class="col-lg-7 project-content-pane">
             <div class="project-index-number">PROJECT 01 / 06 — FEATURED APPLICATION</div>
             <div class="project-category-tag">ENTERPRISE WORKFORCE & GPS TELEMETRY &middot; APPLE APP STORE</div>
             <h3 class="project-name">Subsource — Virtual Manager</h3>
             <p class="project-desc">
-              An enterprise workforce management application published on the Apple App Store featuring one-tap shift clock-ins, background GPS tracking, shift scheduling, store visit management, offline sync, and live satellite location auditing.
+              An enterprise workforce management application published on the Apple App Store featuring one-tap shift
+              clock-ins, background GPS tracking, shift scheduling, store visit management, offline sync, and live
+              satellite location auditing.
             </p>
 
             <div class="contribution-box">
               <h6>MY VERIFIED CONTRIBUTIONS</h6>
               <ul class="contribution-list">
-                <li>Engineered the Start Shift / Clock-in architecture with instant biometric confirmation and satellite telemetry verification.</li>
-                <li>Implemented high-accuracy background geolocation with battery-saving algorithms for continuous route auditing.</li>
-                <li>Built store visit management and geofenced attendance punch-ins verifying worker presence on site.</li>
-                <li>Developed comprehensive expense history tracking with interactive calendar and status workflows.</li>
-                <li>Engineered offline sync allowing field employees to log shifts and visits even in zero-reception areas.</li>
+                <li>Engineered the Start Shift / Clock-in architecture with instant biometric confirmation and satellite
+                  telemetry verification.</li>
+                <li>Implemented high-accuracy background geolocation with battery-saving algorithms for continuous route
+                  auditing.</li>
+                <li>Built store visit management and geofenced attendance punch-ins verifying worker presence on site.
+                </li>
+                <li>Developed comprehensive expense history tracking with interactive calendar and status workflows.
+                </li>
+                <li>Engineered offline sync allowing field employees to log shifts and visits even in zero-reception
+                  areas.</li>
               </ul>
             </div>
 
@@ -687,7 +743,8 @@
             </div>
 
             <div class="d-flex flex-wrap gap-2">
-              <a href="https://apps.apple.com/us/app/subsource-virtual-manager/id6499141041" target="_blank" rel="noopener noreferrer" class="btn-store">
+              <a href="https://apps.apple.com/us/app/subsource-virtual-manager/id6499141041" target="_blank"
+                rel="noopener noreferrer" class="btn-store">
                 <i class="bi bi-apple fs-5"></i> View on App Store <i class="bi bi-box-arrow-up-right ms-1"></i>
               </a>
               <button class="btn-prime view-case-study-btn" data-project-id="subsource">
@@ -701,33 +758,98 @@
             <div class="app-badge-verified">
               <i class="bi bi-check-circle-fill text-cyan"></i> CLOCK-IN SCREENSHOT
             </div>
-            
+
             <div class="mockup-card-phone">
-              <img src="assets/img/projects/subsource-startshift.png" alt="Subsource Virtual Manager Start Shift Clock-In Screenshot">
+              <img src="assets/img/projects/subsource-startshift.png"
+                alt="Subsource Virtual Manager Start Shift Clock-In Screenshot">
             </div>
           </div>
 
         </div>
       </div>
 
-      <!-- PROJECT 02: JANTA DIAGNOSTIC CENTRE & BLOOD BANK -->
-      <div class="project-card-editorial" data-category="web" data-aos="fade-up">
+      <!-- PROJECT 02: SECURELY SYNC APP -->
+      <div class="project-card-editorial" data-category="mobile enterprise" data-aos="fade-up">
         <div class="row g-0">
-          
+
           <div class="col-lg-7 project-content-pane">
-            <div class="project-index-number">PROJECT 02 / 06 — LIVE WEB PORTAL</div>
-            <div class="project-category-tag">HEALTHCARE WEB PORTAL & SERVERLESS API &middot; LIVE PRODUCTION DOMAIN</div>
-            <h3 class="project-name">Janta Diagnostic Centre & Blood Bank</h3>
+            <div class="project-index-number">PROJECT 02 / 06 — APPLE APP STORE</div>
+            <div class="project-category-tag">AI-DRIVEN WORKFORCE MANAGEMENT &middot; APPLE APP STORE</div>
+            <h3 class="project-name">Securely Sync App</h3>
             <p class="project-desc">
-              A full-scale live production healthcare web portal featuring automated diagnostic pathology catalogs, digital X-Ray services, 24x7 emergency blood bank directory, online appointment booking engine, and Vercel serverless API backend.
+              An AI-driven workforce management software live on the Apple App Store featuring employee management,
+              real-time task management, cloud-based synchronization, QR code scanning, and push notifications.
             </p>
 
             <div class="contribution-box">
               <h6>MY VERIFIED CONTRIBUTIONS</h6>
               <ul class="contribution-list">
-                <li>Architected full-responsive healthcare web portal with automated pathology test offerings and dynamic search.</li>
-                <li>Engineered serverless backend API on Vercel handling appointment requests, CORS, and email notification forwarding.</li>
-                <li>Implemented Google Rich Results Schema.org MedicalBusiness structured data and fast mobile layout.</li>
+                <li>Built real-time task management workflows and dynamic employee dispatching interfaces.</li>
+                <li>Integrated high-speed QR code camera scanner for instantaneous worker and checkpoint check-ins.</li>
+                <li>Boosted overall app performance and frame rates by optimizing React Native native bridge modules and
+                  REST caching.</li>
+                <li>Integrated multi-channel push notifications alerting field staff to priority task assignments.</li>
+              </ul>
+            </div>
+
+            <div class="project-tech-stack">
+              <span class="project-tech-pill">React Native</span>
+              <span class="project-tech-pill">QR Scanner</span>
+              <span class="project-tech-pill">REST APIs</span>
+              <span class="project-tech-pill">Push Notifications</span>
+              <span class="project-tech-pill">Cloud Sync</span>
+              <span class="project-tech-pill">Bridge Optimization</span>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2">
+              <a href="https://apps.apple.com/in/app/securely-sync/id6745403009" target="_blank"
+                rel="noopener noreferrer" class="btn-store">
+                <i class="bi bi-apple fs-5"></i> View on App Store <i class="bi bi-box-arrow-up-right ms-1"></i>
+              </a>
+              <button class="btn-prime view-case-study-btn" data-project-id="securely-sync">
+                View Details <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Real Screenshot Showcase -->
+          <div class="col-lg-5 project-visual-pane">
+            <div class="app-badge-verified">
+              <i class="bi bi-apple text-cyan"></i> LIVE ON APP STORE
+            </div>
+
+            <div class="mockup-card-phone">
+              <img src="assets/img/projects/securely-sync-screen.png" alt="Securely Sync App Store Screenshot">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PROJECT 03: JANTA DIAGNOSTIC CENTRE & BLOOD BANK -->
+      <div class="project-card-editorial" data-category="web" data-aos="fade-up">
+        <div class="row g-0 flex-lg-row-reverse">
+
+          <div class="col-lg-7 project-content-pane">
+            <div class="project-index-number">PROJECT 03 / 06 — LIVE WEB PORTAL</div>
+            <div class="project-category-tag">HEALTHCARE WEB PORTAL & SERVERLESS API &middot; LIVE PRODUCTION DOMAIN
+            </div>
+            <h3 class="project-name">Janta Diagnostic Centre & Blood Bank</h3>
+            <p class="project-desc">
+              A full-scale live production healthcare web portal featuring automated diagnostic pathology catalogs,
+              digital X-Ray services, 24x7 emergency blood bank directory, online appointment booking engine, and Vercel
+              serverless API backend.
+            </p>
+
+            <div class="contribution-box">
+              <h6>MY VERIFIED CONTRIBUTIONS</h6>
+              <ul class="contribution-list">
+                <li>Architected full-responsive healthcare web portal with automated pathology test offerings and
+                  dynamic search.</li>
+                <li>Engineered serverless backend API on Vercel handling appointment requests, CORS, and email
+                  notification forwarding.</li>
+                <li>Implemented Google Rich Results Schema.org MedicalBusiness structured data and fast mobile layout.
+                </li>
                 <li>Connected custom domain with SSL certificates and automated continuous deployment.</li>
               </ul>
             </div>
@@ -742,10 +864,12 @@
             </div>
 
             <div class="d-flex flex-wrap gap-2">
-              <a href="https://www.jantadiagnosticscentre.in/" target="_blank" rel="noopener noreferrer" class="btn-store">
+              <a href="https://www.jantadiagnosticscentre.in/" target="_blank" rel="noopener noreferrer"
+                class="btn-store">
                 <i class="bi bi-globe fs-5"></i> Visit Live Website <i class="bi bi-box-arrow-up-right ms-1"></i>
               </a>
-              <a href="https://github.com/sushantonit3652/janta-diagnostic" target="_blank" rel="noopener noreferrer" class="btn-ghost">
+              <a href="https://github.com/sushantonit3652/janta-diagnostic" target="_blank" rel="noopener noreferrer"
+                class="btn-ghost">
                 <i class="bi bi-github fs-5"></i> GitHub Repo
               </a>
               <button class="btn-prime view-case-study-btn" data-project-id="janta-diagnostic">
@@ -759,7 +883,7 @@
             <div class="app-badge-verified">
               <i class="bi bi-globe text-cyan"></i> LIVE ON WEB
             </div>
-            
+
             <div class="mockup-card-browser">
               <div class="mockup-browser-header">
                 <div class="browser-dots">
@@ -774,7 +898,8 @@
                 </div>
               </div>
               <div class="mockup-browser-body">
-                <img src="assets/img/projects/janta-live-screen.png" alt="Janta Diagnostic Centre Live Website Screenshot">
+                <img src="assets/img/projects/janta-live-screen.png"
+                  alt="Janta Diagnostic Centre Live Website Screenshot">
               </div>
             </div>
           </div>
@@ -782,23 +907,26 @@
         </div>
       </div>
 
-      <!-- PROJECT 03: CINEMA+ MOVIE DISCOVERY & BOOKING -->
+      <!-- PROJECT 04: CINEMA+ MOVIE DISCOVERY & BOOKING -->
       <div class="project-card-editorial" data-category="web mobile" data-aos="fade-up">
-        <div class="row g-0 flex-lg-row-reverse">
-          
+        <div class="row g-0">
+
           <div class="col-lg-7 project-content-pane">
-            <div class="project-index-number">PROJECT 03 / 06 — FULL-STACK PLATFORM</div>
+            <div class="project-index-number">PROJECT 04 / 06 — FULL-STACK PLATFORM</div>
             <div class="project-category-tag">FULL-STACK WEB & MOBILE &middot; REACT + NODE.JS BACKEND</div>
             <h3 class="project-name">Cinema+ — Movie Discovery & Ticketing</h3>
             <p class="project-desc">
-              A full-stack cinema ticketing and movie discovery platform engineered with React / React Native frontend and a dedicated Node.js + Express REST API backend server with CORS and real-time showtime states.
+              A full-stack cinema ticketing and movie discovery platform engineered with React / React Native frontend
+              and a dedicated Node.js + Express REST API backend server with CORS and real-time showtime states.
             </p>
 
             <div class="contribution-box">
               <h6>MY VERIFIED CONTRIBUTIONS</h6>
               <ul class="contribution-list">
-                <li>Built responsive mobile and web user interface with movie discovery grids, trailers, and showtime schedules.</li>
-                <li>Engineered the dedicated Node.js + Express backend server (<code>server-cinema</code>) serving movie APIs and booking states.</li>
+                <li>Built responsive mobile and web user interface with movie discovery grids, trailers, and showtime
+                  schedules.</li>
+                <li>Engineered the dedicated Node.js + Express backend server (<code>server-cinema</code>) serving movie
+                  APIs and booking states.</li>
                 <li>Implemented digital mobile ticket generation screen with dynamic QR code pass and theater info.</li>
                 <li>Designed clean REST endpoints handling CORS, showtime data, and user ticket reservations.</li>
               </ul>
@@ -815,10 +943,12 @@
             </div>
 
             <div class="d-flex flex-wrap gap-2">
-              <a href="https://github.com/sushantonit3652/cinema" target="_blank" rel="noopener noreferrer" class="btn-store">
+              <a href="https://github.com/sushantonit3652/cinema" target="_blank" rel="noopener noreferrer"
+                class="btn-store">
                 <i class="bi bi-github fs-5"></i> Frontend Repo <i class="bi bi-box-arrow-up-right ms-1"></i>
               </a>
-              <a href="https://github.com/sushantonit3652/server-cinema" target="_blank" rel="noopener noreferrer" class="btn-ghost">
+              <a href="https://github.com/sushantonit3652/server-cinema" target="_blank" rel="noopener noreferrer"
+                class="btn-ghost">
                 <i class="bi bi-hdd-network fs-5"></i> Backend Server Repo
               </a>
               <button class="btn-prime view-case-study-btn" data-project-id="cinema-plus">
@@ -832,10 +962,11 @@
             <div class="app-badge-verified">
               <i class="bi bi-film text-purple"></i> FULL-STACK SYSTEM
             </div>
-            
+
             <div class="p-3 rounded text-center w-100" style="max-width: 320px;">
-              <div class="mockup-card-phone mx-auto" style="height: 480px; width: 260px;">
-                <img src="assets/img/projects/cinema-blackadam.png" alt="Cinema+ Movie App Screen" style="object-fit: cover;">
+              <div class="mockup-card-phone mockup-phone-cinema mx-auto">
+                <img src="assets/img/projects/cinema-zootopia-device.png" alt="Cinema+ Zootopia 2 Movie App Screen"
+                  loading="lazy">
               </div>
             </div>
           </div>
@@ -843,25 +974,31 @@
         </div>
       </div>
 
-      <!-- PROJECT 04: AIROPASS -->
+      <!-- PROJECT 05: AIROPASS -->
       <div class="project-card-editorial" data-category="mobile travel" data-aos="fade-up">
-        <div class="row g-0">
-          
+        <div class="row g-0 flex-lg-row-reverse">
+
           <div class="col-lg-7 project-content-pane">
-            <div class="project-index-number">PROJECT 04 / 06</div>
+            <div class="project-index-number">PROJECT 05 / 06 — TRAVEL & VISA APP</div>
             <div class="project-category-tag">TRAVEL TECHNOLOGY & TOUR PACKAGES</div>
             <h3 class="project-name">Airopass — Travel, Visa & Flights</h3>
             <p class="project-desc">
-              A comprehensive mobile application engineered with digital tourist visa consulting, live flight bookings (DEL & BOM), verified hotel stays in destinations like Shimla, tour packages, in-app wallet, and partner affiliate desk.
+              A comprehensive mobile application engineered with digital tourist visa consulting, live flight bookings
+              (DEL & BOM), verified hotel stays in destinations like Shimla, tour packages, in-app wallet, and partner
+              affiliate desk.
             </p>
 
             <div class="contribution-box">
               <h6>MY VERIFIED CONTRIBUTIONS</h6>
               <ul class="contribution-list">
-                <li>Architected multi-step visa application desk with document photo capture, compression, and real-time status tracking.</li>
-                <li>Built responsive flight booking module supporting One Way, Round Trip, and Multi-City cabin selections.</li>
-                <li>Implemented verified hotel discovery engine with real-time room availability, date pickers, and destination lookups.</li>
-                <li>Engineered the Partner Mode and dynamic in-app wallet allowing travel agents to process direct bookings.</li>
+                <li>Architected multi-step visa application desk with document photo capture, compression, and real-time
+                  status tracking.</li>
+                <li>Built responsive flight booking module supporting One Way, Round Trip, and Multi-City cabin
+                  selections.</li>
+                <li>Implemented verified hotel discovery engine with real-time room availability, date pickers, and
+                  destination lookups.</li>
+                <li>Engineered the Partner Mode and dynamic in-app wallet allowing travel agents to process direct
+                  bookings.</li>
               </ul>
             </div>
 
@@ -886,64 +1023,9 @@
             <div class="app-badge-verified">
               <i class="bi bi-phone text-cyan"></i> ORIGINAL SCREENSHOT
             </div>
-            
-            <div class="mockup-card-phone">
-              <img src="assets/img/projects/airopass-visa.jpeg" alt="Airopass App Visa Desk Screenshot">
-            </div>
-          </div>
 
-        </div>
-      </div>
-
-      <!-- PROJECT 05: SECURELY SYNC APP -->
-      <div class="project-card-editorial" data-category="mobile enterprise" data-aos="fade-up">
-        <div class="row g-0 flex-lg-row-reverse">
-          
-          <div class="col-lg-7 project-content-pane">
-            <div class="project-index-number">PROJECT 05 / 06</div>
-            <div class="project-category-tag">AI-DRIVEN WORKFORCE MANAGEMENT &middot; APPLE APP STORE</div>
-            <h3 class="project-name">Securely Sync App</h3>
-            <p class="project-desc">
-              An AI-driven workforce management software live on the Apple App Store featuring employee management, real-time task management, cloud-based synchronization, QR code scanning, and push notifications.
-            </p>
-
-            <div class="contribution-box">
-              <h6>MY VERIFIED CONTRIBUTIONS</h6>
-              <ul class="contribution-list">
-                <li>Built real-time task management workflows and dynamic employee dispatching interfaces.</li>
-                <li>Integrated high-speed QR code camera scanner for instantaneous worker and checkpoint check-ins.</li>
-                <li>Boosted overall app performance and frame rates by optimizing React Native native bridge modules and REST caching.</li>
-                <li>Integrated multi-channel push notifications alerting field staff to priority task assignments.</li>
-              </ul>
-            </div>
-
-            <div class="project-tech-stack">
-              <span class="project-tech-pill">React Native</span>
-              <span class="project-tech-pill">QR Scanner</span>
-              <span class="project-tech-pill">REST APIs</span>
-              <span class="project-tech-pill">Push Notifications</span>
-              <span class="project-tech-pill">Cloud Sync</span>
-              <span class="project-tech-pill">Bridge Optimization</span>
-            </div>
-
-            <div class="d-flex flex-wrap gap-2">
-              <a href="https://apps.apple.com/in/app/securely-sync/id6745403009" target="_blank" rel="noopener noreferrer" class="btn-store">
-                <i class="bi bi-apple fs-5"></i> View on App Store <i class="bi bi-box-arrow-up-right ms-1"></i>
-              </a>
-              <button class="btn-prime view-case-study-btn" data-project-id="securely-sync">
-                View Details <i class="bi bi-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- Real Screenshot Showcase -->
-          <div class="col-lg-5 project-visual-pane">
-            <div class="app-badge-verified">
-              <i class="bi bi-apple text-cyan"></i> LIVE ON APP STORE
-            </div>
-            
-            <div class="mockup-card-phone">
-              <img src="assets/img/projects/securely-sync-screen.png" alt="Securely Sync App Store Screenshot">
+            <div class="mockup-card-phone mockup-phone-airopass">
+              <img src="assets/img/projects/airopass-app.jpeg" alt="Airopass Travel App Screen with Full Bottom Tab Navigation">
             </div>
           </div>
 
@@ -953,13 +1035,14 @@
       <!-- PROJECT 06: BIORICH INTERNATIONAL -->
       <div class="project-card-editorial" data-category="mobile enterprise" data-aos="fade-up">
         <div class="row g-0">
-          
+
           <div class="col-lg-7 project-content-pane">
             <div class="project-index-number">PROJECT 06 / 06</div>
             <div class="project-category-tag">BUSINESS MANAGEMENT & SALES &middot; GOOGLE PLAY STORE</div>
             <h3 class="project-name">Biorich International</h3>
             <p class="project-desc">
-              A business application management tool available on Google Play designed to simplify customer management, sales, order processing, and business processes via a dedicated mobile app.
+              A business application management tool available on Google Play designed to simplify customer management,
+              sales, order processing, and business processes via a dedicated mobile app.
             </p>
 
             <div class="contribution-box">
@@ -981,7 +1064,9 @@
             </div>
 
             <div class="d-flex flex-wrap gap-2">
-              <a href="https://play.google.com/store/apps/details?id=com.bio.rich&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="btn-store" style="background: rgba(139, 92, 246, 0.1); border-color: var(--accent-purple); color: var(--accent-purple) !important;">
+              <a href="https://play.google.com/store/apps/details?id=com.bio.rich&pcampaignid=web_share" target="_blank"
+                rel="noopener noreferrer" class="btn-store"
+                style="background: rgba(139, 92, 246, 0.1); border-color: var(--accent-purple); color: var(--accent-purple) !important;">
                 <i class="bi bi-google-play fs-5"></i> View on Google Play <i class="bi bi-box-arrow-up-right ms-1"></i>
               </a>
               <button class="btn-prime view-case-study-btn" data-project-id="biorich">
@@ -995,7 +1080,7 @@
             <div class="app-badge-verified">
               <i class="bi bi-google-play text-purple"></i> LIVE ON GOOGLE PLAY
             </div>
-            
+
             <div class="mockup-card-phone">
               <img src="assets/img/projects/biorich-screen.png" alt="Biorich International Google Play App Screenshot">
             </div>
@@ -1012,17 +1097,18 @@
        ========================================================================= -->
   <section class="services-section" id="services">
     <div class="container">
-      
+
       <div class="text-center mb-5" data-aos="fade-up">
         <span class="section-label">04 — CAPABILITIES</span>
         <h2 class="section-title">What I Can Build For You</h2>
         <p class="section-desc mx-auto">
-          Tailored mobile development services ranging from ground-up app engineering to background location tracking and performance profiling.
+          Tailored mobile development services ranging from ground-up app engineering to background location tracking
+          and performance profiling.
         </p>
       </div>
 
       <div class="row g-4">
-        
+
         <!-- 01 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="service-card">
@@ -1031,7 +1117,8 @@
               <div class="service-icon-box"><i class="bi bi-phone"></i></div>
               <h4 class="service-title">React Native Application Development</h4>
               <p class="service-desc">
-                End-to-end development of high-performance mobile apps from clean architectural blueprints to native device builds.
+                End-to-end development of high-performance mobile apps from clean architectural blueprints to native
+                device builds.
               </p>
             </div>
             <div class="font-mono text-cyan small pt-3 border-top border-dark">Cross-Platform Android & iOS</div>
@@ -1043,10 +1130,13 @@
           <div class="service-card">
             <div>
               <div class="service-num">02 / SERVICE</div>
-              <div class="service-icon-box" style="background: var(--accent-purple-dim); color: var(--accent-purple); border-color: var(--border-purple);"><i class="bi bi-code-slash"></i></div>
+              <div class="service-icon-box"
+                style="background: var(--accent-purple-dim); color: var(--accent-purple); border-color: var(--border-purple);">
+                <i class="bi bi-code-slash"></i></div>
               <h4 class="service-title">React.js Web & Full-Stack Development</h4>
               <p class="service-desc">
-                Responsive web applications built with modern React.js, component design systems, and robust Node.js backend integration.
+                Responsive web applications built with modern React.js, component design systems, and robust Node.js
+                backend integration.
               </p>
             </div>
             <div class="font-mono text-purple small pt-3 border-top border-dark">React.js & Node.js Backend</div>
@@ -1061,7 +1151,8 @@
               <div class="service-icon-box"><i class="bi bi-arrow-left-right"></i></div>
               <h4 class="service-title">REST API & Backend Engineering</h4>
               <p class="service-desc">
-                Robust Node.js and Express backend services, tokenized authentication, secure session handling, and real-time syncing.
+                Robust Node.js and Express backend services, tokenized authentication, secure session handling, and
+                real-time syncing.
               </p>
             </div>
             <div class="font-mono text-cyan small pt-3 border-top border-dark">Node.js, Express & Vercel</div>
@@ -1073,10 +1164,13 @@
           <div class="service-card">
             <div>
               <div class="service-num">04 / SERVICE</div>
-              <div class="service-icon-box" style="background: var(--accent-purple-dim); color: var(--accent-purple); border-color: var(--border-purple);"><i class="bi bi-fire"></i></div>
+              <div class="service-icon-box"
+                style="background: var(--accent-purple-dim); color: var(--accent-purple); border-color: var(--border-purple);">
+                <i class="bi bi-fire"></i></div>
               <h4 class="service-title">Firebase & Push Notifications</h4>
               <p class="service-desc">
-                Complete Firebase ecosystems: Authentication, Cloud Firestore, Realtime Database, FCM Push Notifications, and Storage.
+                Complete Firebase ecosystems: Authentication, Cloud Firestore, Realtime Database, FCM Push
+                Notifications, and Storage.
               </p>
             </div>
             <div class="font-mono text-purple small pt-3 border-top border-dark">Auth & Realtime Firestore</div>
@@ -1091,7 +1185,8 @@
               <div class="service-icon-box"><i class="bi bi-geo-alt"></i></div>
               <h4 class="service-title">GPS & Location Tracking</h4>
               <p class="service-desc">
-                Production-grade background geolocation, geofencing triggers, live tracking maps, and battery-efficient motion telemetry.
+                Production-grade background geolocation, geofencing triggers, live tracking maps, and battery-efficient
+                motion telemetry.
               </p>
             </div>
             <div class="font-mono text-cyan small pt-3 border-top border-dark">Battery-Optimized Telemetry</div>
@@ -1103,10 +1198,13 @@
           <div class="service-card">
             <div>
               <div class="service-num">06 / SERVICE</div>
-              <div class="service-icon-box" style="background: var(--accent-purple-dim); color: var(--accent-purple); border-color: var(--border-purple);"><i class="bi bi-palette"></i></div>
+              <div class="service-icon-box"
+                style="background: var(--accent-purple-dim); color: var(--accent-purple); border-color: var(--border-purple);">
+                <i class="bi bi-palette"></i></div>
               <h4 class="service-title">Mobile App UI Implementation</h4>
               <p class="service-desc">
-                Pixel-perfect conversion of Figma/Adobe XD designs into responsive, accessible, 60fps mobile component hierarchies.
+                Pixel-perfect conversion of Figma/Adobe XD designs into responsive, accessible, 60fps mobile component
+                hierarchies.
               </p>
             </div>
             <div class="font-mono text-purple small pt-3 border-top border-dark">Pixel-Perfect Conversion</div>
@@ -1121,7 +1219,8 @@
               <div class="service-icon-box"><i class="bi bi-tools"></i></div>
               <h4 class="service-title">App Maintenance & Optimization</h4>
               <p class="service-desc">
-                Performance bottleneck resolution, memory leak auditing, native dependency upgrades, and crash analytics triage.
+                Performance bottleneck resolution, memory leak auditing, native dependency upgrades, and crash analytics
+                triage.
               </p>
             </div>
             <div class="font-mono text-cyan small pt-3 border-top border-dark">Profiling & Optimization</div>
@@ -1138,14 +1237,15 @@
        ========================================================================= -->
   <section class="experience-section" id="experience">
     <div class="container">
-      
+
       <div class="row g-5">
-        
+
         <div class="col-lg-4" data-aos="fade-up">
           <span class="section-label">05 — CHRONOLOGY</span>
           <h2 class="section-title">Work Experience</h2>
           <p class="section-desc">
-            Directly from official CV — professional software engineering roles building production mobile applications and web services.
+            Directly from official CV — professional software engineering roles building production mobile applications
+            and web services.
           </p>
 
           <!-- Education Sub-card -->
@@ -1153,7 +1253,8 @@
             <div class="font-mono text-cyan small fw-bold mb-2"><i class="bi bi-mortarboard me-2"></i>EDUCATION</div>
             <div class="mb-2">
               <div class="text-contrast small fw-bold">Bachelor of Science: Non Medical</div>
-              <div class="text-muted-custom" style="font-size: 0.78rem;">DAV College, Dharamshala, HP &middot; Graduated Jun 2022</div>
+              <div class="text-muted-custom" style="font-size: 0.78rem;">DAV College, Dharamshala, HP &middot; Graduated
+                Jun 2022</div>
             </div>
             <div>
               <div class="text-contrast small fw-bold">12th Standard: Non Medical</div>
@@ -1163,7 +1264,8 @@
 
           <!-- Certifications & Languages -->
           <div class="p-3 rounded mt-3" style="background: var(--bg-surface); border: 1px dashed var(--border-subtle);">
-            <div class="font-mono text-purple small fw-bold mb-1"><i class="bi bi-patch-check me-2"></i>CERTIFICATIONS</div>
+            <div class="font-mono text-purple small fw-bold mb-1"><i class="bi bi-patch-check me-2"></i>CERTIFICATIONS
+            </div>
             <div class="text-muted-custom small mb-2">(NSS) 'B' Certificate &middot; (NCC) 'B' Certificate</div>
             <div class="font-mono text-cyan small fw-bold mb-1"><i class="bi bi-translate me-2"></i>LANGUAGES</div>
             <div class="text-muted-custom small">English &middot; Hindi</div>
@@ -1172,7 +1274,7 @@
 
         <div class="col-lg-8" data-aos="fade-up" data-aos-delay="150">
           <div class="experience-timeline">
-            
+
             <!-- Experience Item 1: SubSource -->
             <div class="exp-item">
               <div class="exp-card">
@@ -1183,7 +1285,10 @@
                 <h3 class="exp-role">React Native Developer</h3>
                 <div class="exp-company">Business WebSoft Private Limited</div>
                 <p class="mb-3 text-secondary">
-                  <strong>SubSource (App Store):</strong> Developed an enterprise application featuring GPS tracking, attendance management, shift scheduling, store visit management, offline sync, and live location tracking. Utilized Redux Toolkit, Firestore, REST APIs, background geolocation, Google Maps, push notifications, and AsyncStorage.
+                  <strong>SubSource (App Store):</strong> Developed an enterprise application featuring GPS tracking,
+                  attendance management, shift scheduling, store visit management, offline sync, and live location
+                  tracking. Utilized Redux Toolkit, Firestore, REST APIs, background geolocation, Google Maps, push
+                  notifications, and AsyncStorage.
                 </p>
                 <div class="d-flex flex-wrap gap-2">
                   <span class="project-tech-pill">React Native</span>
@@ -1206,8 +1311,10 @@
                 <h3 class="exp-role">React Native Developer</h3>
                 <div class="exp-company">Pixel Bharat LLP</div>
                 <p class="mb-3 text-secondary">
-                  <strong>Securely Sync App (App Store):</strong> Built an AI-driven workforce management software with employee management, real-time tasks, cloud sync, QR scanning, and push notifications.<br>
-                  <strong>Biorich (Google Play Store):</strong> Developed business application management tool simplifying customer management, sales, and operations.<br>
+                  <strong>Securely Sync App (App Store):</strong> Built an AI-driven workforce management software with
+                  employee management, real-time tasks, cloud sync, QR scanning, and push notifications.<br>
+                  <strong>Biorich (Google Play Store):</strong> Developed business application management tool
+                  simplifying customer management, sales, and operations.<br>
                   <strong>Kutton:</strong> Restaurant table booking software with real-time availability.<br>
                   <strong>Superwin:</strong> Mobile gaming app with digital wallet, payments, and security.
                 </p>
@@ -1232,7 +1339,8 @@
                 <h3 class="exp-role">React Native Developer Intern</h3>
                 <div class="exp-company">Nama Infotech</div>
                 <p class="mb-3 text-secondary">
-                  Developed reusable UI components using React Native. Worked with REST APIs and JSON data. Mastered React Hooks, navigation, state management, and mobile application architecture.
+                  Developed reusable UI components using React Native. Worked with REST APIs and JSON data. Mastered
+                  React Hooks, navigation, state management, and mobile application architecture.
                 </p>
                 <div class="d-flex flex-wrap gap-2">
                   <span class="project-tech-pill">React Native</span>
@@ -1253,7 +1361,8 @@
                 <h3 class="exp-role">Front-End Development Trainee</h3>
                 <div class="exp-company">Growing Seed Technologies</div>
                 <p class="mb-3 text-secondary">
-                  Completed professional training in HTML5, CSS3, JavaScript, and Responsive Web Design. Strengthened problem-solving and front-end development skills.
+                  Completed professional training in HTML5, CSS3, JavaScript, and Responsive Web Design. Strengthened
+                  problem-solving and front-end development skills.
                 </p>
                 <div class="d-flex flex-wrap gap-2">
                   <span class="project-tech-pill">HTML5</span>
@@ -1277,26 +1386,28 @@
        ========================================================================= -->
   <section class="contact-section" id="contact">
     <div class="container">
-      
+
       <div class="contact-card-box" data-aos="fade-up">
         <div class="row g-5 align-items-center">
-          
+
           <!-- Left CTA Column -->
           <div class="col-lg-6">
             <span class="section-label">06 — LET'S WORK TOGETHER</span>
             <h2 class="section-title">Have an Idea? Let's Build Something Great.</h2>
             <p class="section-desc mb-4">
-              Have a mobile application or web product idea? Let's discuss how we can engineer it together with modern React Native, React.js, and Node.js backends.
+              Have a mobile application or web product idea? Let's discuss how we can engineer it together with modern
+              React Native, React.js, and Node.js backends.
             </p>
 
             <div class="d-flex flex-column gap-3 mb-4">
-              
+
               <!-- Direct Email -->
               <div class="d-flex align-items-center gap-3">
                 <div class="footer-social-link"><i class="bi bi-envelope text-cyan"></i></div>
                 <div>
                   <div class="font-mono text-muted-custom small">DIRECT EMAIL</div>
-                  <a href="mailto:sushantthakur.profile@gmail.com" class="text-contrast fw-semibold">sushantthakur.profile@gmail.com</a>
+                  <a href="mailto:sushantthakur.profile@gmail.com"
+                    class="text-contrast fw-semibold">sushantthakur.profile@gmail.com</a>
                 </div>
               </div>
 
@@ -1309,62 +1420,84 @@
                 </div>
               </div>
 
+              <!-- Location / Address -->
+              <div class="d-flex align-items-center gap-3">
+                <div class="footer-social-link"><i class="bi bi-geo-alt text-cyan"></i></div>
+                <div>
+                  <div class="font-mono text-muted-custom small">LOCATION / ADDRESS</div>
+                  <div class="text-contrast fw-semibold">Dalhousie, Chamba, Himachal Pradesh, India</div>
+                </div>
+              </div>
+
               <!-- LinkedIn -->
               <div class="d-flex align-items-center gap-3">
-                <div class="footer-social-link"><i class="bi bi-linkedin text-cyan"></i></div>
+                <div class="footer-social-link"><i class="bi bi-linkedin text-purple"></i></div>
                 <div>
                   <div class="font-mono text-muted-custom small">LINKEDIN PROFILE</div>
-                  <a href="https://www.linkedin.com/in/sushant-thakur-053261259/" target="_blank" rel="noopener noreferrer" class="text-contrast fw-semibold">linkedin.com/in/sushant-thakur-053261259</a>
+                  <a href="https://www.linkedin.com/in/sushant-thakur-053261259/" target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-contrast fw-semibold">linkedin.com/in/sushant-thakur-053261259</a>
                 </div>
               </div>
 
               <!-- GitHub -->
               <div class="d-flex align-items-center gap-3">
-                <div class="footer-social-link"><i class="bi bi-github text-purple"></i></div>
+                <div class="footer-social-link"><i class="bi bi-github text-cyan"></i></div>
                 <div>
                   <div class="font-mono text-muted-custom small">GITHUB PROFILE</div>
-                  <a href="https://github.com/sushantonit3652" target="_blank" rel="noopener noreferrer" class="text-contrast fw-semibold">github.com/sushantonit3652</a>
+                  <a href="https://github.com/sushantonit3652" target="_blank" rel="noopener noreferrer"
+                    class="text-contrast fw-semibold">github.com/sushantonit3652</a>
                 </div>
               </div>
 
             </div>
 
             <div class="d-flex gap-3">
-              <a href="assets/docs/Sushant_Thakur_Resume.pdf" download="Sushant_Thakur_Resume.pdf" class="btn-ghost">
-                <i class="bi bi-download"></i> Download Resume
-              </a>
-              <a href="https://www.linkedin.com/in/sushant-thakur-053261259/" target="_blank" rel="noopener noreferrer" class="btn-ghost">
-                LinkedIn Message <i class="bi bi-arrow-up-right"></i>
+              <a href="https://www.linkedin.com/in/sushant-thakur-053261259/" target="_blank" rel="noopener noreferrer"
+                class="btn-prime">
+                <i class="bi bi-linkedin me-1"></i> Send LinkedIn Message <i class="bi bi-arrow-up-right ms-1"></i>
               </a>
             </div>
           </div>
 
           <!-- Right Column: Validated Contact Form -->
           <div class="col-lg-6">
-            <form id="portfolioContactForm" class="p-4 rounded" style="background: var(--bg-card-inner); border: 1px solid var(--border-subtle);">
-              
+            <form id="portfolioContactForm" action="https://formsubmit.co/sushantthakur.profile@gmail.com" method="POST" class="p-4 rounded"
+              style="background: var(--bg-card-inner); border: 1px solid var(--border-subtle);">
+
+              <!-- FormSubmit configuration -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_subject" id="hiddenFormSubject" value="New Portfolio Inquiry - Sushant Thakur">
+              <input type="text" name="_honey" style="display:none">
+
               <div class="mb-3">
                 <label for="contactName" class="form-label-custom">Your Name *</label>
-                <input type="text" id="contactName" class="form-control-custom" placeholder="e.g. Rahul Sharma" required>
+                <input type="text" id="contactName" name="name" class="form-control-custom" placeholder="e.g. Rahul Sharma"
+                  required autocomplete="name">
               </div>
 
               <div class="mb-3">
                 <label for="contactEmail" class="form-label-custom">Your Email *</label>
-                <input type="email" id="contactEmail" class="form-control-custom" placeholder="e.g. rahul@company.com" required>
+                <input type="email" id="contactEmail" name="email" class="form-control-custom" placeholder="e.g. rahul@company.com"
+                  required autocomplete="email">
               </div>
 
               <div class="mb-3">
                 <label for="contactSubject" class="form-label-custom">Subject / Project Scope</label>
-                <input type="text" id="contactSubject" class="form-control-custom" placeholder="e.g. Mobile App or React.js Web Inquiry">
+                <input type="text" id="contactSubject" name="subject" class="form-control-custom"
+                  placeholder="e.g. Mobile App or React.js Web Inquiry">
               </div>
 
               <div class="mb-4">
                 <label for="contactMessage" class="form-label-custom">Message *</label>
-                <textarea id="contactMessage" rows="4" class="form-control-custom" placeholder="Tell me about your mobile or web project, timeline and requirements..." required></textarea>
+                <textarea id="contactMessage" name="message" rows="4" class="form-control-custom"
+                  placeholder="Tell me about your mobile or web project, timeline and requirements..."
+                  required></textarea>
               </div>
 
-              <button type="submit" class="btn-prime w-100 justify-content-center">
-                Send Message <i class="bi bi-send-fill ms-1"></i>
+              <button type="submit" id="contactSubmitBtn" class="btn-prime w-100 justify-content-center">
+                <span id="contactSubmitBtnText">Send Message</span> <i class="bi bi-send-fill ms-1" id="contactSubmitBtnIcon"></i>
               </button>
 
               <!-- Feedback box -->
@@ -1384,7 +1517,7 @@
        ========================================================================= -->
   <footer class="site-footer">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-      
+
       <div class="d-flex align-items-center gap-2">
         <img src="assets/img/logo.svg" alt="ST Logo" style="width: 32px; height: 32px;">
         <div>
@@ -1398,10 +1531,12 @@
       </div>
 
       <div class="footer-social-links">
-        <a href="https://github.com/sushantonit3652" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="GitHub">
+        <a href="https://github.com/sushantonit3652" target="_blank" rel="noopener noreferrer"
+          class="footer-social-link" title="GitHub">
           <i class="bi bi-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/sushant-thakur-053261259/" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/sushant-thakur-053261259/" target="_blank" rel="noopener noreferrer"
+          class="footer-social-link" title="LinkedIn">
           <i class="bi bi-linkedin"></i>
         </a>
         <a href="mailto:sushantthakur.profile@gmail.com" class="footer-social-link" title="Email">
@@ -1423,7 +1558,7 @@
   <div class="modal fade" id="caseStudyModal" tabindex="-1" aria-labelledby="caseStudyModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content modal-content-custom">
-        
+
         <div class="modal-header modal-header-custom d-flex justify-content-between align-items-center">
           <div>
             <div id="modalProjectNumber" class="font-mono text-cyan small">PROJECT 01</div>
@@ -1436,7 +1571,7 @@
         </div>
 
         <div class="modal-body modal-body-custom">
-          
+
           <h6 class="font-mono text-cyan mb-2">SYSTEM OVERVIEW</h6>
           <p id="modalProjectOverview" class="text-secondary mb-4"></p>
 
@@ -1448,7 +1583,8 @@
 
           <div id="modalStoreAction" class="mb-4"></div>
 
-          <div class="p-3 rounded d-flex justify-content-between align-items-center" style="background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+          <div class="p-3 rounded d-flex justify-content-between align-items-center"
+            style="background: var(--bg-surface); border: 1px solid var(--border-subtle);">
             <div>
               <div class="fw-semibold text-contrast small">Want to build something similar?</div>
               <div class="text-muted small">Let's discuss how we can engineer your mobile or web product.</div>
