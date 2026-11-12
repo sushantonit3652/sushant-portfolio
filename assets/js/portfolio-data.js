@@ -191,7 +191,7 @@ const PORTFOLIO_CONFIG = {
       filterCategory: "mobile enterprise",
       liveUrl: "https://play.google.com/store/apps/details?id=com.bio.rich&pcampaignid=web_share",
       storeLabel: "Google Play Store",
-      image: "assets/img/projects/biorich-icon.png",
+      image: "assets/img/projects/biorich-screen.png",
       icon: "assets/img/projects/biorich-icon.png",
       shortDescription: "A business application management tool on Google Play designed to simplify customer management, sales, order processing, and business operations via a mobile app.",
       longOverview: "Biorich International is a production Android application available on Google Play. It streamlines B2B and retail sales operations, order placements, product catalogs, and field customer relationship tracking.",
