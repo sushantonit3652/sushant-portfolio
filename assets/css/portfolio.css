@@ -1415,6 +1415,116 @@ section {
   display: block;
 }
 
+/* Browser Mockup Window for Web Projects */
+.mockup-card-browser {
+  width: 100%;
+  max-width: 440px;
+  background: var(--bg-surface-elevated);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-accent);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.7),
+    0 0 35px rgba(0, 240, 255, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  margin: 0 auto;
+}
+
+.mockup-card-browser:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 
+    0 35px 60px rgba(0, 0, 0, 0.85),
+    0 0 45px rgba(0, 240, 255, 0.28);
+}
+
+.mockup-browser-header {
+  background: rgba(10, 14, 33, 0.95);
+  padding: 0.65rem 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.browser-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.browser-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.browser-dots span:nth-child(1) { background: #FF5F56; }
+.browser-dots span:nth-child(2) { background: #FFBD2E; }
+.browser-dots span:nth-child(3) { background: #27C93F; }
+
+.browser-address-bar {
+  flex: 1;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 0.25rem 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.browser-address-bar i {
+  font-size: 0.7rem;
+}
+
+.browser-actions {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.mockup-browser-body {
+  width: 100%;
+  aspect-ratio: 16 / 10.5;
+  overflow: hidden;
+  background: #000;
+}
+
+.mockup-browser-body img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+[data-theme="light"] .mockup-card-browser {
+  background: #FFFFFF;
+  border-color: rgba(2, 132, 199, 0.35);
+  box-shadow: 
+    0 20px 45px rgba(15, 23, 42, 0.14),
+    0 0 30px rgba(2, 132, 199, 0.12);
+}
+
+[data-theme="light"] .mockup-browser-header {
+  background: #F1F5F9;
+  border-bottom-color: rgba(148, 163, 184, 0.3);
+}
+
+[data-theme="light"] .browser-address-bar {
+  background: #FFFFFF;
+  border-color: rgba(148, 163, 184, 0.3);
+  color: #334155;
+}
+
 .app-badge-verified {
   position: absolute;
   top: 15px;

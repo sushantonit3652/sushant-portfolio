@@ -101,7 +101,7 @@ const PORTFOLIO_CONFIG = {
       liveUrl: "https://www.jantadiagnosticscentre.in/",
       githubUrl: "https://github.com/sushantonit3652/janta-diagnostic",
       storeLabel: "Live Website",
-      image: "assets/img/projects/janta-diagnostic.jpg",
+      image: "assets/img/projects/janta-live-screen.png",
       logo: "assets/img/projects/janta-logo.png",
       shortDescription: "A full-scale live production healthcare web portal featuring automated diagnostic pathology catalogs, digital X-Ray services, 24x7 blood bank directory, online appointment booking, and Vercel serverless API backend.",
       longOverview: "Janta Diagnostic Centre is a live production healthcare portal serving Noorpur, Bijnor (UP). It provides real-time test catalogs, digital appointment booking with FormSubmit/Vercel serverless function integrations, digital reports access, and 24x7 emergency blood bank contact directories.",
